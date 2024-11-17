@@ -35,13 +35,14 @@ void gotoxy(COORD* coord,HANDLE handle,int x, int y) {
 
 void printUnicode(COORD* coord, HANDLE handle, const wchar_t* str,...) {
     wchar_t buffer[240];
-
     DWORD dwBytesWritten;
+
     va_list args;
     va_start(args, str);  
 
     vswprintf(buffer, 240, str, args);
     WriteConsoleOutputCharacterW(handle, buffer, wcslen(buffer), *coord, &dwBytesWritten);
+
     va_end(args);
 }
 
@@ -63,6 +64,8 @@ void UpdateUI(UpdateType type) {
             else if (i == pos) wcscat(progressBar, L"●");
             else                  wcscat(progressBar, L"━");
     }
+
+    SetConsoleTitle(title);
 
     COORD coord = { 0, 0 };
     HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);

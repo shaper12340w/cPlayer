@@ -153,6 +153,7 @@ int CheckPlayer() {
 			removeArrayValue(&player.pathArray, 0);
 			ExecuteMCI(player.deviceID, MCI_CLOSE, 0, 0);
 			printf("\nMusic Stopped!\n");
+			DeleteTempFile();
 			ResetParam();
 			Ready(); Play();
 			printf("\nPlay Next Music..\n");

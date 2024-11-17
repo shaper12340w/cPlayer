@@ -26,11 +26,12 @@ void ManageKeyboard() {
 			break;
 		case 224: //방향키
 			switch (_getch()) {
-			case 80: //왼쪽
+			case 75: //왼쪽
 				MoveTo(-1000);
 				break;
 			case 77:
 				MoveTo(1000);
+				break;
 			}
 		}
 		UpdateUI(UpdateAll);
