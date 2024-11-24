@@ -6,12 +6,30 @@ typedef struct {
 	wchar_t** array;
 } StringArray;
 
-void initArray(StringArray* arr, int cap, int size);
-void resizeArray(StringArray* arr);
-void addArrayValue(StringArray* arr, const wchar_t* str);
-void changeArrayValue(StringArray* arr, const wchar_t* str, int index);
-void removeArrayValue(StringArray* arr, int index);
-void removeArray(StringArray* arr);
-int getArrayLength(StringArray* arr);
-wchar_t* getArrayValue(StringArray* arr, int index);
-void inspectStringArray(const StringArray* arr);
+typedef struct {
+	int currentValue;
+	size_t capacity;
+	int* array;
+} IntArray;
+
+
+void initStringArray(StringArray* arr, int cap, int size);
+void resizeStringArray(StringArray* arr);
+void addStringArrayValue(StringArray* arr, const wchar_t* str);
+void changeStringArrayValue(StringArray* arr, const wchar_t* str, int index);
+void removeStringArrayValue(StringArray* arr, int index);
+void removeStringArray(StringArray* arr);
+int getStringArrayLength(StringArray* arr);
+int checkStringArrayValue(StringArray* arr, const wchar_t* value);
+wchar_t* getStringArrayValue(StringArray* arr, int index);
+
+
+void initIntArray(IntArray* arr, int cap);
+void resizeIntArray(IntArray* arr);
+void addIntArrayValue(IntArray* arr, int val);
+void changeIntArrayValue(IntArray* arr, int val, int index);
+void removeIntArrayValue(IntArray* arr, int index);
+void removeIntArray(IntArray* arr);
+int getIntArrayLength(IntArray* arr);
+int checkIntArrayValue(IntArray* arr, int value);
+int getIntArrayValue(IntArray* arr, int index);

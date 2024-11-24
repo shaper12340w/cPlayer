@@ -130,12 +130,15 @@
     <ClCompile Include="dynamicArray.cpp" />
     <ClCompile Include="fileManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="manageConsole.cpp" />
     <ClCompile Include="musicPlayer.cpp" />
     <ClCompile Include="playerUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.h" />
     <ClInclude Include="fileMannger.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="manageConsole.h" />
     <ClInclude Include="musicPlayer.h" />
     <ClInclude Include="playerUI.h" />
   </ItemGroup>

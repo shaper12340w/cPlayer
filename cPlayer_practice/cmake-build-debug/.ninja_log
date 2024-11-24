@@ -1,0 +1,8 @@
+# ninja log v6
+20	123	7535646459958848	CMakeFiles/cPlayer_practice.dir/dynamicArray.cpp.obj	85cd040cfae472c
+1	312	7535651684290400	build.ninja	28c1c2cb68adf28
+1454	1525	7535646474287363	cPlayer_practice.exe	8798345c7426c70d
+30	1003	7535646460048567	CMakeFiles/cPlayer_practice.dir/playerUI.cpp.obj	9a259aaff7ab04e6
+28	1002	7535646460028626	CMakeFiles/cPlayer_practice.dir/musicPlayer.cpp.obj	dd60d7441b9edce
+25	1024	7535646460008686	CMakeFiles/cPlayer_practice.dir/main.cpp.obj	8fe84240e08245a
+23	1454	7535646459978795	CMakeFiles/cPlayer_practice.dir/fileManager.cpp.obj	d474dd5d0b44678c

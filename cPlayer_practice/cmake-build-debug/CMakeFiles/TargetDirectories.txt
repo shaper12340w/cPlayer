@@ -1,0 +1,3 @@
+C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/cmake-build-debug/CMakeFiles/cPlayer_practice.dir
+C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/cmake-build-debug/CMakeFiles/rebuild_cache.dir

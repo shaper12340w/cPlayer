@@ -1,7 +1,4 @@
-
-#ifndef MUSICPLAYER_H
-#define MUSICPLAYER_H
-
+#pragma once
 #include <stdio.h>
 #include <windows.h>
 #include <mmsystem.h>
@@ -19,7 +16,12 @@ typedef struct {
 typedef struct {
 	int deviceID;
 	int paused;
+	int repeat;
+	int shuffle;
+	int playIndex;
 	StringArray pathArray;
+	IntArray deletedArray;
+	IntArray playedArray;
 } PlayerData;
 
 extern MCI_PARAM param;
@@ -32,8 +34,10 @@ void Add(const wchar_t* path);
 void Ready();
 void Play();
 void Pause();
+void Next();
+void Prev();
+void Shuffle();
+void Repeat();
 void MoveTo(int time);
 int CheckPlayer();
 // 헤더 내용
-
-#endif 
