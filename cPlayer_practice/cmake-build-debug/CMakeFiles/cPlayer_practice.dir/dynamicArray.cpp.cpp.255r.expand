@@ -1,0 +1,1841 @@
+
+;; Function printf (_Z6printfPKcz, funcdef_no=37, decl_uid=3912, cgraph_uid=12, symbol_order=11)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 27.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [2 __format+0 S8 A64])
+        (reg:DI 2 cx [ __format ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [0  S8 A8])
+        (reg:DI 1 dx)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [0  S8 A8])
+        (reg:DI 36 r8)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 24 [0x18])) [0  S8 A8])
+        (reg:DI 37 r9)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (parallel [
+            (set (reg:DI 86)
+                (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":374:53 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 MEM[(char * *)&__local_argv]+0 S8 A128])
+        (reg:DI 86)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":374:53 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 82 [ __local_argv.0_1 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 __local_argv+0 S8 A128])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 87)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp___acrt_iob_func") [flags 0x2002]  <var_decl 0000000003fe2510 D.6972>) [3  S8 A8])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("__acrt_iob_func") [flags 0x441]  <function_decl 0000000003dfa100 __acrt_iob_func>)
+        (nil)))
+(call_insn 14 13 15 2 (set (reg:DI 0 ax)
+        (call (mem:QI (reg:DI 87) [0 __acrt_iob_func S1 A8])
+            (const_int 32 [0x20]))) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil)
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 88)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [2 __format+0 S8 A64])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 36 r8)
+        (reg/f:DI 82 [ __local_argv.0_1 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 1 dx)
+        (reg:DI 88)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 2 cx)
+        (reg/f:DI 83 [ _2 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(call_insn 20 19 21 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__mingw_vfprintf") [flags 0x43]  <function_decl 0000000003dfae00 __mingw_vfprintf>) [0 __mingw_vfprintf S1 A8])
+            (const_int 32 [0x20]))) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 21 20 22 2 (set (reg:SI 89)
+        (reg:SI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __retval+0 S4 A32])
+        (reg:SI 89)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 23 22 26 2 (set (reg:SI 84 [ _11 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __retval+0 S4 A32])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":377:10 -1
+     (nil))
+(insn 26 23 30 2 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 84 [ _11 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":377:10 -1
+     (nil))
+(insn 30 26 31 2 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":378:1 -1
+     (nil))
+(insn 31 30 0 2 (use (reg/i:SI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":378:1 -1
+     (nil))
+
+;; Function initArray (_Z9initArrayP11StringArrayii, funcdef_no=109, decl_uid=6877, cgraph_uid=55, symbol_order=54)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 5->6 to 7 failed.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":15:53 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 cap+0 S4 A64])
+        (reg:SI 1 dx [ cap ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":15:53 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [1 size+0 S4 A64])
+        (reg:SI 36 r8 [ size ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":15:53 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg/f:DI 94)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":16:20 -1
+     (nil))
+(insn 9 8 10 2 (set (mem:SI (reg/f:DI 94) [1 arr_16(D)->currentValue+0 S4 A64])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":16:20 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 95)
+        (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 cap+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":17:18 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 82 [ _1 ])
+        (sign_extend:DI (reg:SI 95))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":17:18 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 96)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":17:16 -1
+     (nil))
+(insn 13 12 14 2 (set (mem:DI (plus:DI (reg/f:DI 96)
+                (const_int 8 [0x8])) [6 arr_16(D)->capacity+0 S8 A64])
+        (reg:DI 82 [ _1 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":17:16 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 97)
+        (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [1 size+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":18:18 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 83 [ _2 ])
+        (sign_extend:DI (reg:SI 97))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":18:18 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:DI 98)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":18:16 -1
+     (nil))
+(insn 17 16 18 2 (set (mem:DI (plus:DI (reg/f:DI 98)
+                (const_int 16 [0x10])) [6 arr_16(D)->wordSize+0 S8 A64])
+        (reg:DI 83 [ _2 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":18:16 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 99)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:38 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 99)
+                (const_int 8 [0x8])) [6 arr_16(D)->capacity+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:38 -1
+     (nil))
+(insn 20 19 21 2 (parallel [
+            (set (reg:DI 85 [ _4 ])
+                (ashift:DI (reg:DI 84 [ _3 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:32 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 2 cx)
+        (reg:DI 85 [ _4 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:32 -1
+     (nil))
+(call_insn 22 21 23 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x43]  <function_decl 0000000003b20600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:32 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 23 22 24 2 (set (reg/f:DI 100)
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:32 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 100)
+        (nil)))
+(insn 24 23 25 2 (set (reg/f:DI 86 [ _5 ])
+        (reg/f:DI 100)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:32 -1
+     (nil))
+(insn 25 24 26 2 (set (reg/f:DI 101)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:13 discrim 1 -1
+     (nil))
+(insn 26 25 27 2 (set (mem/f:DI (plus:DI (reg/f:DI 101)
+                (const_int 24 [0x18])) [7 arr_16(D)->array+0 S8 A64])
+        (reg/f:DI 86 [ _5 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":19:13 discrim 1 -1
+     (nil))
+(insn 27 26 28 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":20:11 -1
+     (nil))
+(jump_insn 28 27 29 2 (set (pc)
+        (label_ref 46)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":20:2 -1
+     (nil)
+ -> 46)
+(barrier 29 28 48)
+(code_label 48 29 30 4 5 (nil) [1 uses])
+(note 30 48 31 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 4 (set (reg/f:DI 102)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:41 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:DI 87 [ _6 ])
+        (mem:DI (plus:DI (reg/f:DI 102)
+                (const_int 16 [0x10])) [6 arr_16(D)->wordSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:41 -1
+     (nil))
+(insn 33 32 34 4 (parallel [
+            (set (reg:DI 88 [ _7 ])
+                (ashift:DI (reg:DI 87 [ _6 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:35 -1
+     (nil))
+(insn 34 33 35 4 (set (reg/f:DI 103)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:8 -1
+     (nil))
+(insn 35 34 36 4 (set (reg/f:DI 89 [ _8 ])
+        (mem/f:DI (plus:DI (reg/f:DI 103)
+                (const_int 24 [0x18])) [7 arr_16(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:8 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:SI 104)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:14 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:DI 90 [ _9 ])
+        (sign_extend:DI (reg:SI 104))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:14 -1
+     (nil))
+(insn 38 37 39 4 (parallel [
+            (set (reg:DI 91 [ _10 ])
+                (ashift:DI (reg:DI 90 [ _9 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:15 -1
+     (nil))
+(insn 39 38 40 4 (parallel [
+            (set (reg/f:DI 92 [ _11 ])
+                (plus:DI (reg/f:DI 89 [ _8 ])
+                    (reg:DI 91 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:15 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:DI 2 cx)
+        (reg:DI 88 [ _7 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:35 -1
+     (nil))
+(call_insn 41 40 42 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x43]  <function_decl 0000000003b20600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:35 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 42 41 43 4 (set (reg/f:DI 105)
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:35 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 105)
+        (nil)))
+(insn 43 42 44 4 (set (reg/f:DI 93 [ _12 ])
+        (reg/f:DI 105)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:35 -1
+     (nil))
+(insn 44 43 45 4 (set (mem/f:DI (reg/f:DI 92 [ _11 ]) [8 *_11+0 S8 A64])
+        (reg/f:DI 93 [ _12 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":21:17 discrim 1 -1
+     (nil))
+(insn 45 44 46 4 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":20:2 discrim 3 -1
+     (nil))
+(code_label 46 45 47 5 4 (nil) [1 uses])
+(note 47 46 49 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 49 47 50 5 (set (reg:SI 106)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":20:19 discrim 1 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 106)
+            (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [1 cap+0 S4 A64]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":20:19 discrim 1 -1
+     (nil))
+(jump_insn 51 50 52 5 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":20:19 discrim 1 -1
+     (nil)
+ -> 48)
+(note 52 51 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function resizeArray (_Z11resizeArrayP11StringArray, funcdef_no=110, decl_uid=6885, cgraph_uid=56, symbol_order=55)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 9->10 to 11 failed.
+Merging block 11 into block 10...
+Merged blocks 10 and 11.
+Merged 10 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":24:36 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:DI 100)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":25:12 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 101)
+        (mem:DI (plus:DI (reg/f:DI 100)
+                (const_int 8 [0x8])) [6 arr_22(D)->capacity+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":25:12 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 oldCapacity+0 S8 A128])
+        (reg:DI 101)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":25:12 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 102)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":26:10 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 82 [ _1 ])
+        (mem:DI (plus:DI (reg/f:DI 102)
+                (const_int 8 [0x8])) [6 arr_22(D)->capacity+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":26:10 -1
+     (nil))
+(insn 11 10 12 2 (parallel [
+            (set (reg:DI 83 [ _2 ])
+                (ashift:DI (reg:DI 82 [ _1 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":26:19 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 103)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":26:19 -1
+     (nil))
+(insn 13 12 14 2 (set (mem:DI (plus:DI (reg/f:DI 103)
+                (const_int 8 [0x8])) [6 arr_22(D)->capacity+0 S8 A64])
+        (reg:DI 83 [ _2 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":26:19 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 104)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:54 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 104)
+                (const_int 8 [0x8])) [6 arr_22(D)->capacity+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:54 -1
+     (nil))
+(insn 16 15 17 2 (parallel [
+            (set (reg:DI 85 [ _4 ])
+                (ashift:DI (reg:DI 84 [ _3 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:36 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:DI 105)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:42 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 86 [ _5 ])
+        (mem/f:DI (plus:DI (reg/f:DI 105)
+                (const_int 24 [0x18])) [7 arr_22(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:42 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 1 dx)
+        (reg:DI 85 [ _4 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:36 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 2 cx)
+        (reg/f:DI 86 [ _5 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:36 -1
+     (nil))
+(call_insn 21 20 22 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("realloc") [flags 0x43]  <function_decl 0000000003b23600 realloc>) [0 __builtin_realloc S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:36 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 22 21 23 2 (set (reg/f:DI 87 [ _6 ])
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:36 -1
+     (nil))
+(insn 23 22 24 2 (set (reg/f:DI 106)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:16 discrim 1 -1
+     (nil))
+(insn 24 23 25 2 (set (mem/f:DI (plus:DI (reg/f:DI 106)
+                (const_int 24 [0x18])) [7 arr_22(D)->array+0 S8 A64])
+        (reg/f:DI 87 [ _6 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":27:16 discrim 1 -1
+     (nil))
+(insn 25 24 26 2 (set (reg/f:DI 107)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":28:14 -1
+     (nil))
+(insn 26 25 27 2 (set (reg/f:DI 88 [ _7 ])
+        (mem/f:DI (plus:DI (reg/f:DI 107)
+                (const_int 24 [0x18])) [7 arr_22(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":28:14 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 88 [ _7 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":28:5 -1
+     (nil))
+(jump_insn 28 27 29 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":28:5 -1
+     (nil)
+ -> 36)
+(note 29 28 30 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 4 (set (reg:DI 108)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 000000000415f090 *.LC0>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":29:15 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:DI 2 cx)
+        (reg:DI 108)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":29:15 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 000000000415f090 *.LC0>)
+        (nil)))
+(call_insn 32 31 33 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 0000000003e0ca00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":29:15 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 33 32 34 4 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":30:13 -1
+     (nil))
+(call_insn 34 33 35 4 (call (mem:QI (symbol_ref:DI ("exit") [flags 0x43]  <function_decl 0000000003b12b00 exit>) [0 __builtin_exit S1 A8])
+        (const_int 32 [0x20])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":30:13 -1
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(barrier 35 34 36)
+(code_label 36 35 37 5 7 (nil) [1 uses])
+(note 37 36 38 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 5 (set (reg:DI 109)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 oldCapacity+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:17 -1
+     (nil))
+(insn 39 38 40 5 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])
+        (reg:DI 109)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:17 -1
+     (nil))
+(jump_insn 40 39 41 5 (set (pc)
+        (label_ref 76)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:5 -1
+     (nil)
+ -> 76)
+(barrier 41 40 80)
+(code_label 80 41 42 6 10 (nil) [1 uses])
+(note 42 80 43 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 6 (set (reg/f:DI 110)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:47 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:DI 89 [ _8 ])
+        (mem:DI (plus:DI (reg/f:DI 110)
+                (const_int 16 [0x10])) [6 arr_22(D)->wordSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:47 -1
+     (nil))
+(insn 45 44 46 6 (parallel [
+            (set (reg:DI 90 [ _9 ])
+                (ashift:DI (reg:DI 89 [ _8 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:41 -1
+     (nil))
+(insn 46 45 47 6 (set (reg/f:DI 111)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:14 -1
+     (nil))
+(insn 47 46 48 6 (set (reg/f:DI 91 [ _10 ])
+        (mem/f:DI (plus:DI (reg/f:DI 111)
+                (const_int 24 [0x18])) [7 arr_22(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:14 -1
+     (nil))
+(insn 48 47 49 6 (set (reg:DI 112)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:21 -1
+     (nil))
+(insn 49 48 50 6 (parallel [
+            (set (reg:DI 92 [ _11 ])
+                (ashift:DI (reg:DI 112)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:21 -1
+     (expr_list:REG_EQUAL (ashift:DI (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 50 49 51 6 (parallel [
+            (set (reg/f:DI 93 [ _12 ])
+                (plus:DI (reg/f:DI 91 [ _10 ])
+                    (reg:DI 92 [ _11 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:21 -1
+     (nil))
+(insn 51 50 52 6 (set (reg:DI 2 cx)
+        (reg:DI 90 [ _9 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:41 -1
+     (nil))
+(call_insn 52 51 53 6 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x43]  <function_decl 0000000003b20600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:41 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 53 52 54 6 (set (reg/f:DI 113)
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:41 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 113)
+        (nil)))
+(insn 54 53 55 6 (set (reg/f:DI 94 [ _13 ])
+        (reg/f:DI 113)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:41 -1
+     (nil))
+(insn 55 54 56 6 (set (mem/f:DI (reg/f:DI 93 [ _12 ]) [8 *_12+0 S8 A64])
+        (reg/f:DI 94 [ _13 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":34:23 discrim 1 -1
+     (nil))
+(insn 56 55 57 6 (set (reg/f:DI 114)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:18 -1
+     (nil))
+(insn 57 56 58 6 (set (reg/f:DI 95 [ _14 ])
+        (mem/f:DI (plus:DI (reg/f:DI 114)
+                (const_int 24 [0x18])) [7 arr_22(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:18 -1
+     (nil))
+(insn 58 57 59 6 (set (reg:DI 115)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:25 -1
+     (nil))
+(insn 59 58 60 6 (parallel [
+            (set (reg:DI 96 [ _15 ])
+                (ashift:DI (reg:DI 115)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:25 -1
+     (expr_list:REG_EQUAL (ashift:DI (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 60 59 61 6 (parallel [
+            (set (reg/f:DI 97 [ _16 ])
+                (plus:DI (reg/f:DI 95 [ _14 ])
+                    (reg:DI 96 [ _15 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:25 -1
+     (nil))
+(insn 61 60 62 6 (set (reg/f:DI 98 [ _17 ])
+        (mem/f:DI (reg/f:DI 97 [ _16 ]) [8 *_16+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:25 -1
+     (nil))
+(insn 62 61 63 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 98 [ _17 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:9 -1
+     (nil))
+(jump_insn 63 62 64 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":35:9 -1
+     (nil)
+ -> 73)
+(note 64 63 65 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 7 (set (reg:DI 116)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":36:19 -1
+     (nil))
+(insn 66 65 67 7 (set (reg:DI 1 dx)
+        (reg:DI 116)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":36:19 -1
+     (nil))
+(insn 67 66 68 7 (set (reg:DI 117)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 000000000415f120 *.LC1>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":36:19 -1
+     (nil))
+(insn 68 67 69 7 (set (reg:DI 2 cx)
+        (reg:DI 117)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":36:19 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 000000000415f120 *.LC1>)
+        (nil)))
+(call_insn 69 68 70 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 0000000003e0ca00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":36:19 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 70 69 71 7 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":37:17 -1
+     (nil))
+(call_insn 71 70 72 7 (call (mem:QI (symbol_ref:DI ("exit") [flags 0x43]  <function_decl 0000000003b12b00 exit>) [0 __builtin_exit S1 A8])
+        (const_int 32 [0x20])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":37:17 -1
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(barrier 72 71 73)
+(code_label 73 72 74 8 9 (nil) [1 uses])
+(note 74 73 75 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 76 8 (parallel [
+            (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])
+                (plus:DI (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:5 discrim 2 -1
+     (nil))
+(code_label 76 75 77 9 8 (nil) [1 uses])
+(note 77 76 78 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 78 77 79 9 (set (reg/f:DI 118)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:43 discrim 1 -1
+     (nil))
+(insn 79 78 81 9 (set (reg:DI 99 [ _18 ])
+        (mem:DI (plus:DI (reg/f:DI 118)
+                (const_int 8 [0x8])) [6 arr_22(D)->capacity+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:43 discrim 1 -1
+     (nil))
+(insn 81 79 82 9 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [6 i+0 S8 A64])
+            (reg:DI 99 [ _18 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:36 discrim 1 -1
+     (nil))
+(jump_insn 82 81 83 9 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":33:36 discrim 1 -1
+     (nil)
+ -> 80)
+(note 83 82 0 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+
+;; Function addArrayValue (_Z13addArrayValueP11StringArrayPKw, funcdef_no=111, decl_uid=6895, cgraph_uid=57, symbol_order=56)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 72 from 12 to 13.
+deleting block 12
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":42:58 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [8 str+0 S8 A64])
+        (reg:DI 1 dx [ str ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":42:58 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:DI 103)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":43:11 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 82 [ _1 ])
+        (mem:SI (reg/f:DI 103) [1 arr_26(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":43:11 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 83 [ _2 ])
+        (sign_extend:DI (reg:SI 82 [ _1 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":43:11 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:DI 104)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":43:32 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 104)
+                (const_int 8 [0x8])) [6 arr_26(D)->capacity+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":43:32 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 83 [ _2 ])
+            (reg:DI 84 [ _3 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":43:2 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":43:2 -1
+     (nil)
+ -> 18)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg:DI 105)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":44:14 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:DI 2 cx)
+        (reg:DI 105)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":44:14 -1
+     (nil))
+(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:DI ("_Z11resizeArrayP11StringArray") [flags 0x3]  <function_decl 0000000003f75900 resizeArray>) [0 resizeArray S1 A8])
+        (const_int 32 [0x20])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":44:14 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(code_label 18 17 19 5 12 (nil) [1 uses])
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg/f:DI 106)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:11 -1
+     (nil))
+(insn 21 20 22 5 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (plus:DI (reg/f:DI 106)
+                (const_int 24 [0x18])) [7 arr_26(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:11 -1
+     (nil))
+(insn 22 21 23 5 (set (reg/f:DI 107)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:22 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:SI 86 [ _5 ])
+        (mem:SI (reg/f:DI 107) [1 arr_26(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:22 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:DI 87 [ _6 ])
+        (sign_extend:DI (reg:SI 86 [ _5 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:22 -1
+     (nil))
+(insn 25 24 26 5 (parallel [
+            (set (reg:DI 88 [ _7 ])
+                (ashift:DI (reg:DI 87 [ _6 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:34 -1
+     (nil))
+(insn 26 25 27 5 (parallel [
+            (set (reg/f:DI 89 [ _8 ])
+                (plus:DI (reg/f:DI 85 [ _4 ])
+                    (reg:DI 88 [ _7 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:34 -1
+     (nil))
+(insn 27 26 28 5 (set (reg/f:DI 90 [ _9 ])
+        (mem/f:DI (reg/f:DI 89 [ _8 ]) [8 *_8+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:34 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 90 [ _9 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:44 -1
+     (nil))
+(jump_insn 29 28 30 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:44 -1
+     (nil)
+ -> 43)
+(note 30 29 31 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 6 (set (reg:DI 108)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [8 str+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:53 discrim 1 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:DI 2 cx)
+        (reg:DI 108)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:53 discrim 1 -1
+     (nil))
+(call_insn 33 32 34 6 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("wcslen") [flags 0x43]  <function_decl 0000000003db0c00 wcslen>) [0 wcslen S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:53 discrim 1 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 34 33 35 6 (set (reg:DI 91 [ _10 ])
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:53 discrim 1 -1
+     (nil))
+(insn 35 34 36 6 (set (reg/f:DI 109)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:66 discrim 1 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:DI 92 [ _11 ])
+        (mem:DI (plus:DI (reg/f:DI 109)
+                (const_int 16 [0x10])) [6 arr_26(D)->wordSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:66 discrim 1 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 91 [ _10 ])
+            (reg:DI 92 [ _11 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:44 discrim 1 -1
+     (nil))
+(jump_insn 38 37 39 6 (set (pc)
+        (if_then_else (geu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:44 discrim 1 -1
+     (nil)
+ -> 43)
+(note 39 38 40 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 41 7 (set (reg:QI 102 [ iftmp.2_21 ])
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:44 discrim 3 -1
+     (nil))
+(jump_insn 41 40 42 7 (set (pc)
+        (label_ref 46)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:44 -1
+     (nil)
+ -> 46)
+(barrier 42 41 43)
+(code_label 43 42 44 8 13 (nil) [2 uses])
+(note 44 43 45 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 8 (set (reg:QI 102 [ iftmp.2_21 ])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:44 discrim 4 -1
+     (nil))
+(code_label 46 45 47 9 14 (nil) [1 uses])
+(note 47 46 48 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 102 [ iftmp.2_21 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:2 discrim 6 -1
+     (nil))
+(jump_insn 49 48 50 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 74)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":45:2 discrim 6 -1
+     (nil)
+ -> 74)
+(note 50 49 51 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 10 (set (reg/f:DI 110)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil))
+(insn 52 51 53 10 (set (reg:DI 93 [ _12 ])
+        (mem:DI (plus:DI (reg/f:DI 110)
+                (const_int 16 [0x10])) [6 arr_26(D)->wordSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil))
+(insn 53 52 54 10 (set (reg/f:DI 111)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:17 -1
+     (nil))
+(insn 54 53 55 10 (set (reg/f:DI 94 [ _13 ])
+        (mem/f:DI (plus:DI (reg/f:DI 111)
+                (const_int 24 [0x18])) [7 arr_26(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:17 -1
+     (nil))
+(insn 55 54 56 10 (set (reg/f:DI 112)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:28 -1
+     (nil))
+(insn 56 55 57 10 (set (reg:SI 95 [ _14 ])
+        (mem:SI (reg/f:DI 112) [1 arr_26(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:28 -1
+     (nil))
+(insn 57 56 58 10 (set (reg:DI 96 [ _15 ])
+        (sign_extend:DI (reg:SI 95 [ _14 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:28 -1
+     (nil))
+(insn 58 57 59 10 (parallel [
+            (set (reg:DI 97 [ _16 ])
+                (ashift:DI (reg:DI 96 [ _15 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:40 -1
+     (nil))
+(insn 59 58 60 10 (parallel [
+            (set (reg/f:DI 98 [ _17 ])
+                (plus:DI (reg/f:DI 94 [ _13 ])
+                    (reg:DI 97 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:40 -1
+     (nil))
+(insn 60 59 61 10 (set (reg/f:DI 99 [ _18 ])
+        (mem/f:DI (reg/f:DI 98 [ _17 ]) [8 *_17+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil))
+(insn 61 60 62 10 (set (reg:DI 113)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [8 str+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil))
+(insn 62 61 63 10 (set (reg:DI 36 r8)
+        (reg:DI 113)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil))
+(insn 63 62 64 10 (set (reg:DI 1 dx)
+        (reg:DI 93 [ _12 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil))
+(insn 64 63 65 10 (set (reg:DI 2 cx)
+        (reg/f:DI 99 [ _18 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil))
+(insn 65 64 66 10 (set (reg:DI 114)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_wcscpy_s") [flags 0x2002]  <var_decl 000000000415f990 D.6975>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("wcscpy_s") [flags 0x441]  <function_decl 0000000003deb800 wcscpy_s>)
+        (nil)))
+(call_insn 66 65 67 10 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 114) [0 wcscpy_s S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":46:11 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 67 66 68 10 (set (reg/f:DI 115)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":47:8 -1
+     (nil))
+(insn 68 67 69 10 (set (reg:SI 100 [ _19 ])
+        (mem:SI (reg/f:DI 115) [1 arr_26(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":47:8 -1
+     (nil))
+(insn 69 68 70 10 (parallel [
+            (set (reg:SI 101 [ _20 ])
+                (plus:SI (reg:SI 100 [ _19 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":47:20 -1
+     (nil))
+(insn 70 69 71 10 (set (reg/f:DI 116)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":47:20 -1
+     (nil))
+(insn 71 70 72 10 (set (mem:SI (reg/f:DI 116) [1 arr_26(D)->currentValue+0 S4 A64])
+        (reg:SI 101 [ _20 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":47:20 -1
+     (nil))
+(jump_insn 72 71 73 10 (set (pc)
+        (label_ref:DI 84)) 997 {jump}
+     (nil)
+ -> 84)
+(barrier 73 72 74)
+(code_label 74 73 75 11 15 (nil) [1 uses])
+(note 75 74 76 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 77 11 (set (reg:DI 117)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 000000000415fa20 *.LC2>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":50:9 -1
+     (nil))
+(insn 77 76 78 11 (set (reg:DI 2 cx)
+        (reg:DI 117)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":50:9 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 000000000415fa20 *.LC2>)
+        (nil)))
+(call_insn 78 77 79 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 0000000003e0ca00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":50:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 79 78 80 11 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":51:7 -1
+     (nil))
+(call_insn 80 79 81 11 (call (mem:QI (symbol_ref:DI ("exit") [flags 0x43]  <function_decl 0000000003b12b00 exit>) [0 __builtin_exit S1 A8])
+        (const_int 32 [0x20])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":51:7 -1
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(barrier 81 80 84)
+(code_label 84 81 85 13 11 (nil) [1 uses])
+(note 85 84 0 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+
+;; Function changeArrayValue (_Z16changeArrayValueP11StringArrayPKwi, funcdef_no=112, decl_uid=6900, cgraph_uid=58, symbol_order=57)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 22 from 7 to 8.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":56:72 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [8 str+0 S8 A64])
+        (reg:DI 1 dx [ str ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":56:72 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [1 index+0 S4 A64])
+        (reg:SI 36 r8 [ index ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":56:72 -1
+     (nil))
+(note 5 4 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 5 11 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 16 [0x10])) [1 index+0 S4 A64])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":57:5 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 17)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":57:5 -1
+     (nil)
+ -> 17)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg/f:DI 89)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":57:36 discrim 1 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:SI 82 [ _1 ])
+        (mem:SI (reg/f:DI 89) [1 arr_11(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":57:36 discrim 1 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 16 [0x10])) [1 index+0 S4 A64])
+            (reg:SI 82 [ _1 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":57:19 discrim 1 -1
+     (nil))
+(jump_insn 16 15 17 4 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":57:19 discrim 1 -1
+     (nil)
+ -> 24)
+(code_label 17 16 18 5 19 (nil) [1 uses])
+(note 18 17 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 5 (set (reg:DI 90)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0000000004202360 *.LC3>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":58:15 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:DI 2 cx)
+        (reg:DI 90)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":58:15 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0000000004202360 *.LC3>)
+        (nil)))
+(call_insn 21 20 22 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 0000000003e0ca00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":58:15 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(jump_insn 22 21 23 5 (set (pc)
+        (label_ref:DI 43)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":59:9 997 {jump}
+     (nil)
+ -> 43)
+(barrier 23 22 24)
+(code_label 24 23 25 6 20 (nil) [1 uses])
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 6 (set (reg/f:DI 91)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil))
+(insn 27 26 28 6 (set (reg:DI 83 [ _2 ])
+        (mem:DI (plus:DI (reg/f:DI 91)
+                (const_int 16 [0x10])) [6 arr_11(D)->wordSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil))
+(insn 28 27 29 6 (set (reg/f:DI 92)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:19 -1
+     (nil))
+(insn 29 28 30 6 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (plus:DI (reg/f:DI 92)
+                (const_int 24 [0x18])) [7 arr_11(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:19 -1
+     (nil))
+(insn 30 29 31 6 (set (reg:SI 93)
+        (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [1 index+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:25 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:DI 85 [ _4 ])
+        (sign_extend:DI (reg:SI 93))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:25 -1
+     (nil))
+(insn 32 31 33 6 (parallel [
+            (set (reg:DI 86 [ _5 ])
+                (ashift:DI (reg:DI 85 [ _4 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:30 -1
+     (nil))
+(insn 33 32 34 6 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 84 [ _3 ])
+                    (reg:DI 86 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:30 -1
+     (nil))
+(insn 34 33 35 6 (set (reg/f:DI 88 [ _7 ])
+        (mem/f:DI (reg/f:DI 87 [ _6 ]) [8 *_6+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [8 str+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:DI 36 r8)
+        (reg:DI 94)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:DI 1 dx)
+        (reg:DI 83 [ _2 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:DI 2 cx)
+        (reg/f:DI 88 [ _7 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:DI 95)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_wcscpy_s") [flags 0x2002]  <var_decl 000000000415f990 D.6975>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("wcscpy_s") [flags 0x441]  <function_decl 0000000003deb800 wcscpy_s>)
+        (nil)))
+(call_insn 40 39 43 6 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 95) [0 wcscpy_s S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":61:13 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(code_label 43 40 44 8 18 (nil) [1 uses])
+(note 44 43 0 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+
+;; Function removeArrayValue (_Z16removeArrayValueP11StringArrayi, funcdef_no=113, decl_uid=6904, cgraph_uid=59, symbol_order=58)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 21 from 10 to 11.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":64:52 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 index+0 S4 A64])
+        (reg:SI 1 dx [ index ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":64:52 -1
+     (nil))
+(note 4 3 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 4 10 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [1 index+0 S4 A64])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":65:5 -1
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 16)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":65:5 -1
+     (nil)
+ -> 16)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 4 (set (reg/f:DI 106)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":65:36 discrim 1 -1
+     (nil))
+(insn 13 12 14 4 (set (reg:SI 82 [ _1 ])
+        (mem:SI (reg/f:DI 106) [1 arr_30(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":65:36 discrim 1 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [1 index+0 S4 A64])
+            (reg:SI 82 [ _1 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":65:19 discrim 1 -1
+     (nil))
+(jump_insn 15 14 16 4 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":65:19 discrim 1 -1
+     (nil)
+ -> 23)
+(code_label 16 15 17 5 23 (nil) [1 uses])
+(note 17 16 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 5 (set (reg:DI 107)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0000000004202360 *.LC3>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":66:15 -1
+     (nil))
+(insn 19 18 20 5 (set (reg:DI 2 cx)
+        (reg:DI 107)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":66:15 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0000000004202360 *.LC3>)
+        (nil)))
+(call_insn 20 19 21 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 0000000003e0ca00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":66:15 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(jump_insn 21 20 22 5 (set (pc)
+        (label_ref:DI 78)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":67:9 997 {jump}
+     (nil)
+ -> 78)
+(barrier 22 21 23)
+(code_label 23 22 24 6 24 (nil) [1 uses])
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (reg:SI 108)
+        (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 index+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:14 -1
+     (nil))
+(insn 26 25 27 6 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (reg:SI 108)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:14 -1
+     (nil))
+(jump_insn 27 26 28 6 (set (pc)
+        (label_ref 46)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:5 -1
+     (nil)
+ -> 46)
+(barrier 28 27 51)
+(code_label 51 28 29 7 27 (nil) [1 uses])
+(note 29 51 30 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 7 (set (reg/f:DI 109)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:30 -1
+     (nil))
+(insn 31 30 32 7 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 109)
+                (const_int 24 [0x18])) [7 arr_30(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:30 -1
+     (nil))
+(insn 32 31 33 7 (set (reg:SI 110)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:41 -1
+     (nil))
+(insn 33 32 34 7 (set (reg:DI 84 [ _3 ])
+        (sign_extend:DI (reg:SI 110))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:41 -1
+     (nil))
+(insn 34 33 35 7 (parallel [
+            (set (reg:DI 85 [ _4 ])
+                (plus:DI (reg:DI 84 [ _3 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:41 -1
+     (nil))
+(insn 35 34 36 7 (parallel [
+            (set (reg:DI 86 [ _5 ])
+                (ashift:DI (reg:DI 85 [ _4 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:41 -1
+     (nil))
+(insn 36 35 37 7 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 83 [ _2 ])
+                    (reg:DI 86 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:41 -1
+     (nil))
+(insn 37 36 38 7 (set (reg/f:DI 111)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:14 -1
+     (nil))
+(insn 38 37 39 7 (set (reg/f:DI 88 [ _7 ])
+        (mem/f:DI (plus:DI (reg/f:DI 111)
+                (const_int 24 [0x18])) [7 arr_30(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:14 -1
+     (nil))
+(insn 39 38 40 7 (set (reg:SI 112)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:20 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:DI 89 [ _8 ])
+        (sign_extend:DI (reg:SI 112))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:20 -1
+     (nil))
+(insn 41 40 42 7 (parallel [
+            (set (reg:DI 90 [ _9 ])
+                (ashift:DI (reg:DI 89 [ _8 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:21 -1
+     (nil))
+(insn 42 41 43 7 (parallel [
+            (set (reg/f:DI 91 [ _10 ])
+                (plus:DI (reg/f:DI 88 [ _7 ])
+                    (reg:DI 90 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:21 -1
+     (nil))
+(insn 43 42 44 7 (set (reg/f:DI 92 [ _11 ])
+        (mem/f:DI (reg/f:DI 87 [ _6 ]) [8 *_6+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:41 -1
+     (nil))
+(insn 44 43 45 7 (set (mem/f:DI (reg/f:DI 91 [ _10 ]) [8 *_10+0 S8 A64])
+        (reg/f:DI 92 [ _11 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":71:23 -1
+     (nil))
+(insn 45 44 46 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:5 discrim 3 -1
+     (nil))
+(code_label 46 45 47 8 26 (nil) [1 uses])
+(note 47 46 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 8 (set (reg/f:DI 113)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:34 discrim 1 -1
+     (nil))
+(insn 49 48 50 8 (set (reg:SI 93 [ _12 ])
+        (mem:SI (reg/f:DI 113) [1 arr_30(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:34 discrim 1 -1
+     (nil))
+(insn 50 49 52 8 (parallel [
+            (set (reg:SI 94 [ _13 ])
+                (plus:SI (reg:SI 93 [ _12 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:47 discrim 1 -1
+     (nil))
+(insn 52 50 53 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 94 [ _13 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:27 discrim 1 -1
+     (nil))
+(jump_insn 53 52 54 8 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 51)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":70:27 discrim 1 -1
+     (nil)
+ -> 51)
+(note 54 53 55 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 9 (set (reg/f:DI 114)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:63 -1
+     (nil))
+(insn 56 55 57 9 (set (reg:DI 95 [ _14 ])
+        (mem:DI (plus:DI (reg/f:DI 114)
+                (const_int 16 [0x10])) [6 arr_30(D)->wordSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:63 -1
+     (nil))
+(insn 57 56 58 9 (parallel [
+            (set (reg:DI 96 [ _15 ])
+                (ashift:DI (reg:DI 95 [ _14 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:57 -1
+     (nil))
+(insn 58 57 59 9 (set (reg/f:DI 115)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:10 -1
+     (nil))
+(insn 59 58 60 9 (set (reg/f:DI 97 [ _16 ])
+        (mem/f:DI (plus:DI (reg/f:DI 115)
+                (const_int 24 [0x18])) [7 arr_30(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:10 -1
+     (nil))
+(insn 60 59 61 9 (set (reg/f:DI 116)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:21 -1
+     (nil))
+(insn 61 60 62 9 (set (reg:SI 98 [ _17 ])
+        (mem:SI (reg/f:DI 116) [1 arr_30(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:21 -1
+     (nil))
+(insn 62 61 63 9 (set (reg:DI 99 [ _18 ])
+        (sign_extend:DI (reg:SI 98 [ _17 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:21 -1
+     (nil))
+(insn 63 62 64 9 (parallel [
+            (set (reg:DI 100 [ _19 ])
+                (ashift:DI (reg:DI 99 [ _18 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:37 -1
+     (nil))
+(insn 64 63 65 9 (parallel [
+            (set (reg:DI 101 [ _20 ])
+                (plus:DI (reg:DI 100 [ _19 ])
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:37 -1
+     (nil))
+(insn 65 64 66 9 (parallel [
+            (set (reg/f:DI 102 [ _21 ])
+                (plus:DI (reg/f:DI 97 [ _16 ])
+                    (reg:DI 101 [ _20 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:37 -1
+     (nil))
+(insn 66 65 67 9 (set (reg:DI 2 cx)
+        (reg:DI 96 [ _15 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:57 -1
+     (nil))
+(call_insn 67 66 68 9 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x43]  <function_decl 0000000003b20600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:57 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 68 67 69 9 (set (reg/f:DI 117)
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:57 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 117)
+        (nil)))
+(insn 69 68 70 9 (set (reg/f:DI 103 [ _22 ])
+        (reg/f:DI 117)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:57 -1
+     (nil))
+(insn 70 69 71 9 (set (mem/f:DI (reg/f:DI 102 [ _21 ]) [8 *_21+0 S8 A64])
+        (reg/f:DI 103 [ _22 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":73:39 discrim 1 -1
+     (nil))
+(insn 71 70 72 9 (set (reg/f:DI 118)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":74:10 -1
+     (nil))
+(insn 72 71 73 9 (set (reg:SI 104 [ _23 ])
+        (mem:SI (reg/f:DI 118) [1 arr_30(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":74:10 -1
+     (nil))
+(insn 73 72 74 9 (parallel [
+            (set (reg:SI 105 [ _24 ])
+                (plus:SI (reg:SI 104 [ _23 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":74:22 -1
+     (nil))
+(insn 74 73 75 9 (set (reg/f:DI 119)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":74:22 -1
+     (nil))
+(insn 75 74 78 9 (set (mem:SI (reg/f:DI 119) [1 arr_30(D)->currentValue+0 S4 A64])
+        (reg:SI 105 [ _24 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":74:22 -1
+     (nil))
+(code_label 78 75 79 11 22 (nil) [1 uses])
+(note 79 78 0 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+
+;; Function removeArray (_Z11removeArrayP11StringArray, funcdef_no=114, decl_uid=6912, cgraph_uid=60, symbol_order=59)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":77:36 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:11 -1
+     (nil))
+(jump_insn 7 6 8 2 (set (pc)
+        (label_ref 20)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:2 -1
+     (nil)
+ -> 20)
+(barrier 8 7 26)
+(code_label 26 8 9 4 30 (nil) [1 uses])
+(note 9 26 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 4 (set (reg/f:DI 90)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:13 -1
+     (nil))
+(insn 11 10 12 4 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 90)
+                (const_int 24 [0x18])) [7 arr_13(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:13 -1
+     (nil))
+(insn 12 11 13 4 (set (reg:SI 91)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:19 -1
+     (nil))
+(insn 13 12 14 4 (set (reg:DI 83 [ _2 ])
+        (sign_extend:DI (reg:SI 91))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:19 -1
+     (nil))
+(insn 14 13 15 4 (parallel [
+            (set (reg:DI 84 [ _3 ])
+                (ashift:DI (reg:DI 83 [ _2 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:20 -1
+     (nil))
+(insn 15 14 16 4 (parallel [
+            (set (reg/f:DI 85 [ _4 ])
+                (plus:DI (reg/f:DI 82 [ _1 ])
+                    (reg:DI 84 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:20 -1
+     (nil))
+(insn 16 15 17 4 (set (reg/f:DI 86 [ _5 ])
+        (mem/f:DI (reg/f:DI 85 [ _4 ]) [8 *_4+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:7 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 2 cx)
+        (reg/f:DI 86 [ _5 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:7 -1
+     (nil))
+(call_insn 18 17 19 4 (call (mem:QI (symbol_ref:DI ("free") [flags 0x43]  <function_decl 0000000003b17300 free>) [0 __builtin_free S1 A8])
+        (const_int 32 [0x20])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":79:7 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 19 18 20 4 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:2 discrim 3 -1
+     (nil))
+(code_label 20 19 21 5 29 (nil) [1 uses])
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg:SI 92)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:17 discrim 1 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:DI 87 [ _6 ])
+        (sign_extend:DI (reg:SI 92))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:17 discrim 1 -1
+     (nil))
+(insn 24 23 25 5 (set (reg/f:DI 93)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:26 discrim 1 -1
+     (nil))
+(insn 25 24 27 5 (set (reg:DI 88 [ _7 ])
+        (mem:DI (plus:DI (reg/f:DI 93)
+                (const_int 8 [0x8])) [6 arr_13(D)->capacity+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:26 discrim 1 -1
+     (nil))
+(insn 27 25 28 5 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 87 [ _6 ])
+            (reg:DI 88 [ _7 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:19 discrim 1 -1
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 26)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":78:19 discrim 1 -1
+     (nil)
+ -> 26)
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg/f:DI 94)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":80:12 -1
+     (nil))
+(insn 31 30 32 6 (set (reg/f:DI 89 [ _8 ])
+        (mem/f:DI (plus:DI (reg/f:DI 94)
+                (const_int 24 [0x18])) [7 arr_13(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":80:12 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:DI 2 cx)
+        (reg/f:DI 89 [ _8 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":80:6 -1
+     (nil))
+(call_insn 33 32 0 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x43]  <function_decl 0000000003b17300 free>) [0 __builtin_free S1 A8])
+        (const_int 32 [0x20])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":80:6 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+
+;; Function getArrayLength (_Z14getArrayLengthP11StringArray, funcdef_no=115, decl_uid=6920, cgraph_uid=61, symbol_order=60)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 12.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":83:38 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:DI 85)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":84:14 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 82 [ _1 ])
+        (mem:SI (reg/f:DI 85) [1 arr_3(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":84:14 -1
+     (nil))
+(insn 8 7 11 2 (parallel [
+            (set (reg:SI 83 [ _4 ])
+                (plus:SI (reg:SI 82 [ _1 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":84:27 -1
+     (nil))
+(insn 11 8 15 2 (set (reg:SI 84 [ <retval> ])
+        (reg:SI 83 [ _4 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":84:27 discrim 1 -1
+     (nil))
+(insn 15 11 16 2 (set (reg/i:SI 0 ax)
+        (reg:SI 84 [ <retval> ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":85:1 -1
+     (nil))
+(insn 16 15 0 2 (use (reg/i:SI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":85:1 -1
+     (nil))
+
+;; Function getArrayValue (_Z13getArrayValueP11StringArrayi, funcdef_no=116, decl_uid=6924, cgraph_uid=62, symbol_order=61)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 41.
+Merging block 8 into block 7...
+Merged blocks 7 and 8.
+Merged 7 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])
+        (reg:DI 2 cx [ arr ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":87:53 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 index+0 S4 A64])
+        (reg:SI 1 dx [ index ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":87:53 -1
+     (nil))
+(note 4 3 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 4 10 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [1 index+0 S4 A64])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":88:2 -1
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 16)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":88:2 -1
+     (nil)
+ -> 16)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 4 (set (reg/f:DI 90)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":88:33 discrim 1 -1
+     (nil))
+(insn 13 12 14 4 (set (reg:SI 82 [ _1 ])
+        (mem:SI (reg/f:DI 90) [1 arr_11(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":88:33 discrim 1 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [1 index+0 S4 A64])
+            (reg:SI 82 [ _1 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":88:16 discrim 1 -1
+     (nil))
+(jump_insn 15 14 16 4 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":88:16 discrim 1 -1
+     (nil)
+ -> 29)
+(code_label 16 15 17 5 34 (nil) [1 uses])
+(note 17 16 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 5 (set (reg/f:DI 91)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (nil))
+(insn 19 18 20 5 (set (reg:SI 83 [ _2 ])
+        (mem:SI (reg/f:DI 91) [1 arr_11(D)->currentValue+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:SI 92)
+        (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 index+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:SI 36 r8)
+        (reg:SI 83 [ _2 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 1 dx)
+        (reg:SI 92)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:DI 93)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0000000004272bd0 *.LC4>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:DI 2 cx)
+        (reg:DI 93)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0000000004272bd0 *.LC4>)
+        (nil)))
+(call_insn 25 24 26 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 0000000003e0ca00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":89:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:SI (use (reg:SI 1 dx))
+            (expr_list:SI (use (reg:SI 36 r8))
+                (nil)))))
+(insn 26 25 27 5 (set (reg/f:DI 88 [ _7 ])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":90:10 -1
+     (nil))
+(jump_insn 27 26 28 5 (set (pc)
+        (label_ref 38)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":90:10 -1
+     (nil)
+ -> 38)
+(barrier 28 27 29)
+(code_label 29 28 30 6 35 (nil) [1 uses])
+(note 30 29 31 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 6 (set (reg/f:DI 94)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 arr+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":92:14 -1
+     (nil))
+(insn 32 31 33 6 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (plus:DI (reg/f:DI 94)
+                (const_int 24 [0x18])) [7 arr_11(D)->array+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":92:14 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:SI 95)
+        (mem/c:SI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 index+0 S4 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":92:20 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:DI 85 [ _4 ])
+        (sign_extend:DI (reg:SI 95))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":92:20 -1
+     (nil))
+(insn 35 34 36 6 (parallel [
+            (set (reg:DI 86 [ _5 ])
+                (ashift:DI (reg:DI 85 [ _4 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":92:25 -1
+     (nil))
+(insn 36 35 37 6 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 84 [ _3 ])
+                    (reg:DI 86 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":92:25 -1
+     (nil))
+(insn 37 36 38 6 (set (reg/f:DI 88 [ _7 ])
+        (mem/f:DI (reg/f:DI 87 [ _6 ]) [8 *_6+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":92:25 -1
+     (nil))
+(code_label 38 37 39 7 36 (nil) [1 uses])
+(note 39 38 40 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 44 7 (set (reg/f:DI 89 [ <retval> ])
+        (reg/f:DI 88 [ _7 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":93:1 -1
+     (nil))
+(insn 44 40 45 7 (set (reg/i:DI 0 ax)
+        (reg/f:DI 89 [ <retval> ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":93:1 -1
+     (nil))
+(insn 45 44 0 7 (use (reg/i:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/dynamicArray.cpp":93:1 -1
+     (nil))

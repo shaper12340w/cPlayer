@@ -1,0 +1,48 @@
+\doxysection{dynamic\+Array.\+h}
+\hypertarget{dynamic_array_8h_source}{}\label{dynamic_array_8h_source}\mbox{\hyperlink{dynamic_array_8h}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00002}00002\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00003}00003\ \ \ \ \ \textcolor{keywordtype}{int}\ currentValue;}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00004}00004\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ capacity;}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00005}00005\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ wordSize;}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}**\ array;}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00007}00007\ \}\ \mbox{\hyperlink{struct_string_array}{StringArray}};}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00009}00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{int}\ currentValue;}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ capacity;}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{int}*\ array;}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00013}00013\ \}\ \mbox{\hyperlink{struct_int_array}{IntArray}};}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00016}00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_ab8ada7b52de414fed0fabc6a7e482d06}{initStringArray}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr,\ \textcolor{keywordtype}{int}\ cap,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00017}00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_ae7430bc846e2bd26dee7a398d4c61d3f}{resizeStringArray}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00018}00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_aeeb7693e1628d77d5d8426f38a4775fa}{addStringArrayValue}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}*\ str);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00019}00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_a460358c1f34126bfef852ea6d7991d09}{changeStringArrayValue}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}*\ str,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00020}00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_a4eda59eb24899ce5ecea937d011a22ea}{removeStringArrayValue}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00021}00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_a60ae06601a9715123cf58b75b472eb63}{removeStringArray}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00022}00022\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{dynamic_array_8h_adacf9282530b68191d5d02d1d9756014}{getStringArrayLength}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00023}00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{dynamic_array_8h_ac390e526637a2bd9ff40440265317aa0}{checkStringArrayValue}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}*\ value);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00024}00024\ \textcolor{keywordtype}{wchar\_t}*\ \mbox{\hyperlink{dynamic_array_8h_a5921838065e1c0e27a510ea32a5941db}{getStringArrayValue}}(\mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00027}00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_ae6c02625a31964826743600621108091}{initIntArray}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr,\ \textcolor{keywordtype}{int}\ cap);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00028}00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_ad3b6b1d292f83c58971cbb186718adb5}{resizeIntArray}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00029}00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_a6804c56ddc86e6793cc846afa5fcfad9}{addIntArrayValue}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00030}00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_ac05014112c6c3828b28e0a5c5d6178e1}{changeIntArrayValue}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr,\ \textcolor{keywordtype}{int}\ val,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00031}00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_a3c3d6bf3dfbbeb119fbed50eab4b18a5}{removeIntArrayValue}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00032}00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_a8614ae132d46c64329acb098f66e2687}{removeIntArray}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00033}00033\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{dynamic_array_8h_a72f77dc17158db19cf48394ee69d34e7}{getIntArrayLength}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00034}00034\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{dynamic_array_8h_a6f47afb1a948826955d8952fb8d8f48c}{checkIntArrayValue}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00035}00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{dynamic_array_8h_af1342933a39b755287cd8a7d017ce715}{getIntArrayValue}}(\mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00038}\mbox{\hyperlink{dynamic_array_8h_a6a03cb2a3ac6197231b65056e6b01ee9}{00038}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00039}\mbox{\hyperlink{dynamic_array_8h_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}{00039}}\ \ \ \ \ \mbox{\hyperlink{dynamic_array_8h_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}{ARRAY\_TYPE\_INT}},}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{dynamic_array_8h_a6a03cb2a3ac6197231b65056e6b01ee9a43fe8ceee2b5443ff5369c5765cf2c2b}{ARRAY\_TYPE\_WSTRING}}}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00041}\mbox{\hyperlink{dynamic_array_8h_a6a03cb2a3ac6197231b65056e6b01ee9a43fe8ceee2b5443ff5369c5765cf2c2b}{00041}}\ \}\ \mbox{\hyperlink{dynamic_array_8h_a6a03cb2a3ac6197231b65056e6b01ee9}{ArrayType}};}
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{dynamic_array_8h_source_l00043}00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dynamic_array_8h_a235505f332e4b8932db9dc2929fa4292}{debugArray}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ arrayStruct,\ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9}{ArrayType}}\ type);}
+
+\end{DoxyCode}

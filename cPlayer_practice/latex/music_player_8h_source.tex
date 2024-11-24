@@ -1,0 +1,52 @@
+\doxysection{music\+Player.\+h}
+\hypertarget{music_player_8h_source}{}\label{music_player_8h_source}\mbox{\hyperlink{music_player_8h}{Ïù¥ ÌååÏùºÏùò Î¨∏ÏÑúÌôî ÌéòÏù¥ÏßÄÎ°ú Í∞ÄÍ∏∞}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00002}00002\ \textcolor{preprocessor}{\#ifndef\ MUSICPLAYER\_H}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00003}00003\ \textcolor{preprocessor}{\#define\ MUSICPLAYER\_H}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <mmsystem.h>}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dynamic_array_8h}{dynamicArray.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}DigitalV.h"{}}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00010}00010\ \textcolor{preprocessor}{\#pragma\ comment\ (lib,\ "{}winmm.lib"{})}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00012}00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00013}00013\ \ \ \ \ MCI\_OPEN\_PARMSW\ openParam;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00014}00014\ \ \ \ \ MCI\_PLAY\_PARMS\ playParam;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00015}\mbox{\hyperlink{struct_m_c_i___p_a_r_a_m_aeec3d9d212a19478043552da2e250565}{00015}}\ \ \ \ \ MCI\_DGV\_STATUS\_PARMSW\ \mbox{\hyperlink{struct_m_c_i___p_a_r_a_m_aeec3d9d212a19478043552da2e250565}{pauseParam}};}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00016}00016\ \ \ \ \ MCI\_STATUS\_PARMS\ statusParam;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00017}00017\ \}\ \mbox{\hyperlink{struct_m_c_i___p_a_r_a_m}{MCI\_PARAM}};}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00019}00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{int}\ deviceID;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{int}\ paused;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{int}\ repeat;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{int}\ shuffle;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ playIndex;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{struct_string_array}{StringArray}}\ pathArray;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{struct_int_array}{IntArray}}\ deletedArray;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{struct_int_array}{IntArray}}\ playedArray;}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00028}00028\ \}\ \mbox{\hyperlink{struct_player_data}{PlayerData}};}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00030}00030\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_m_c_i___p_a_r_a_m}{MCI\_PARAM}}\ \mbox{\hyperlink{music_player_8h_a296a88211db1f4cb0ea593c8dd91f1c9}{param}};}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00031}00031\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_player_data}{PlayerData}}\ \mbox{\hyperlink{music_player_8h_a6a21669261f0832b477f6c237eebe18b}{player}};}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00033}00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_a845a2209b10e92fb6e4fcbc0fbb8a8a4}{ExecuteMCI}}(MCIDEVICEID\ \textcolor{keywordtype}{id},\ UINT\ msg,\ DWORD\_PTR\ command,\ DWORD\_PTR\ \mbox{\hyperlink{music_player_8h_a296a88211db1f4cb0ea593c8dd91f1c9}{param}});}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00034}00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_ab1e3218036977e006ae6fd1f66c16ae4}{InitPlayer}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00035}00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{music_player_8h_a133ffa0437a422ffdb948b05f9310f1d}{GetStatus}}(DWORD\ dwStatus);}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00036}00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_acf43331cff6571aa75ad00496d48d049}{Add}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}*\ path);}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_a3071137f83027d3caeeb4fd67ff113ef}{Ready}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00038}00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_a12574569144fb9d22d996965ee42b627}{Play}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00039}00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_a70babc5227ddd16ca31dccc6cec0bb22}{Pause}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00040}00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_a659a293dd51073a1b9560bb80f687705}{Next}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00041}00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_aa5e6d1c9afab8f462aebc2ba76b91022}{Prev}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00042}00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_a2697cc8b37d7bca7c055228382a9b208}{Shuffle}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00043}00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{music_player_8h_a2f5ad38e6e6d05e643ff8e0a801f20ec}{MoveTo}}(\textcolor{keywordtype}{int}\ time);}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00044}00044\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{music_player_8h_aa657919bde438eaf13d0e8add07f737f}{CheckPlayer}}();}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00045}00045\ \textcolor{comment}{//\ «Ï¥ı ≥ªøÎ}}
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{music_player_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

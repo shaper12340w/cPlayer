@@ -1,0 +1,1629 @@
+
+;; Function printf (_Z6printfPKcz, funcdef_no=9, decl_uid=3017, cgraph_uid=10, symbol_order=9)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 27.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [2 __format+0 S8 A64])
+        (reg:DI 2 cx [ __format ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [0  S8 A8])
+        (reg:DI 1 dx)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [0  S8 A8])
+        (reg:DI 36 r8)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 24 [0x18])) [0  S8 A8])
+        (reg:DI 37 r9)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":372:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (parallel [
+            (set (reg:DI 86)
+                (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":374:53 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 MEM[(char * *)&__local_argv]+0 S8 A128])
+        (reg:DI 86)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":374:53 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 82 [ __local_argv.1_1 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 __local_argv+0 S8 A128])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 87)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp___acrt_iob_func") [flags 0x2002]  <var_decl 00000000227b7360 D.122606>) [3  S8 A8])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("__acrt_iob_func") [flags 0x441]  <function_decl 0000000006588300 __acrt_iob_func>)
+        (nil)))
+(call_insn 14 13 15 2 (set (reg:DI 0 ax)
+        (call (mem:QI (reg:DI 87) [0 __acrt_iob_func S1 A8])
+            (const_int 32 [0x20]))) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil)
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 88)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [2 __format+0 S8 A64])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 36 r8)
+        (reg/f:DI 82 [ __local_argv.1_1 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 1 dx)
+        (reg:DI 88)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 2 cx)
+        (reg/f:DI 83 [ _2 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(call_insn 20 19 21 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__mingw_vfprintf") [flags 0x43]  <function_decl 0000000006588100 __mingw_vfprintf>) [0 __mingw_vfprintf S1 A8])
+            (const_int 32 [0x20]))) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 21 20 22 2 (set (reg:SI 89)
+        (reg:SI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __retval+0 S4 A32])
+        (reg:SI 89)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":375:30 discrim 1 -1
+     (nil))
+(insn 23 22 26 2 (set (reg:SI 84 [ _11 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __retval+0 S4 A32])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":377:10 -1
+     (nil))
+(insn 26 23 30 2 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 84 [ _11 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":377:10 -1
+     (nil))
+(insn 30 26 31 2 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":378:1 -1
+     (nil))
+(insn 31 30 0 2 (use (reg/i:SI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":378:1 -1
+     (nil))
+
+;; Function wprintf (wprintf, funcdef_no=23, decl_uid=3433, cgraph_uid=24, symbol_order=23)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 27.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 __format+0 S8 A64])
+        (reg:DI 2 cx [ __format ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1147:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [0  S8 A8])
+        (reg:DI 1 dx)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1147:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [0  S8 A8])
+        (reg:DI 36 r8)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1147:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 24 [0x18])) [0  S8 A8])
+        (reg:DI 37 r9)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1147:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1149:53 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 MEM[(char * *)&__local_argv]+0 S8 A128])
+        (reg:DI 87)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1149:53 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 82 [ __local_argv.6_1 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 __local_argv+0 S8 A128])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 88)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp___acrt_iob_func") [flags 0x2002]  <var_decl 00000000227b7360 D.122606>) [3  S8 A8])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("__acrt_iob_func") [flags 0x441]  <function_decl 0000000006588300 __acrt_iob_func>)
+        (nil)))
+(call_insn 14 13 15 2 (set (reg:DI 0 ax)
+        (call (mem:QI (reg:DI 88) [0 __acrt_iob_func S1 A8])
+            (const_int 32 [0x20]))) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 -1
+     (nil)
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 89)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 __format+0 S8 A64])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 discrim 1 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 36 r8)
+        (reg/f:DI 82 [ __local_argv.6_1 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 discrim 1 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 1 dx)
+        (reg:DI 89)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 discrim 1 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 2 cx)
+        (reg/f:DI 83 [ _2 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 discrim 1 -1
+     (nil))
+(call_insn 20 19 21 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__mingw_vfwprintf") [flags 0x43]  <function_decl 00000000065e7000 __mingw_vfwprintf>) [0 __mingw_vfwprintf S1 A8])
+            (const_int 32 [0x20]))) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 discrim 1 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 21 20 22 2 (set (reg:SI 84 [ _10 ])
+        (reg:SI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 discrim 1 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __retval+0 S4 A32])
+        (reg:SI 84 [ _10 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1150:31 discrim 2 -1
+     (nil))
+(insn 23 22 26 2 (set (reg:SI 85 [ _13 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __retval+0 S4 A32])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1152:10 -1
+     (nil))
+(insn 26 23 30 2 (set (reg:SI 86 [ <retval> ])
+        (reg:SI 85 [ _13 ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1152:10 -1
+     (nil))
+(insn 30 26 31 2 (set (reg/i:SI 0 ax)
+        (reg:SI 86 [ <retval> ])) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1153:1 -1
+     (nil))
+(insn 31 30 0 2 (use (reg/i:SI 0 ax)) "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h":1153:1 -1
+     (nil))
+
+;; Function SetFileHidden (_Z13SetFileHiddenPKw, funcdef_no=6905, decl_uid=122485, cgraph_uid=6848, symbol_order=7502)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 29.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 path+0 S8 A64])
+        (reg:DI 2 cx [ path ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":9:40 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:DI 86)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 path+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:25 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 1 dx)
+        (const_int 2 [0x2])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:25 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 2 cx)
+        (reg:DI 86)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:25 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 87)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_SetFileAttributesW") [flags 0x2002]  <var_decl 00000000227b7bd0 D.122607>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:25 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("SetFileAttributesW") [flags 0x441]  <function_decl 000000001e4fc200 SetFileAttributesW>)
+        (nil)))
+(call_insn 10 9 11 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 87) [0 SetFileAttributesW S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:25 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:SI (use (reg:SI 1 dx))
+            (nil))))
+(insn 11 10 12 2 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:25 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:6 discrim 1 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:QI 84 [ retval.0_8 ])
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:6 discrim 1 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 84 [ retval.0_8 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:2 discrim 1 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":10:2 discrim 1 -1
+     (nil)
+ -> 23)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:DI 88)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 00000000227b7c60 *.LC0>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":11:9 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 2 cx)
+        (reg:DI 88)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":11:9 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 00000000227b7c60 *.LC0>)
+        (nil)))
+(call_insn 19 18 20 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 00000000065bdb00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":11:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 20 19 21 4 (set (reg:SI 83 [ _2 ])
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":12:10 -1
+     (nil))
+(jump_insn 21 20 22 4 (set (pc)
+        (label_ref 26)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":12:10 -1
+     (nil)
+ -> 26)
+(barrier 22 21 23)
+(code_label 23 22 24 5 6 (nil) [1 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg:SI 83 [ _2 ])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":14:9 -1
+     (nil))
+(code_label 26 25 27 6 7 (nil) [1 uses])
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 32 6 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 83 [ _2 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":15:1 -1
+     (nil))
+(insn 32 28 33 6 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":15:1 -1
+     (nil))
+(insn 33 32 0 6 (use (reg/i:SI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":15:1 -1
+     (nil))
+
+;; Function RemoveTag (_Z9RemoveTagPKwPwy, funcdef_no=6906, decl_uid=122490, cgraph_uid=6849, symbol_order=7503)
+
+Partition 0: size 1024 align 16
+	buffer
+
+;; Generating RTL for gimple basic block 2
+Selected stringop expansion strategy: rep_8byte
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 63 from 17 to 18.
+Redirecting jump 146 from 17 to 18.
+Redirecting jump 203 from 17 to 18.
+Merging block 17 into block 16...
+Merged blocks 16 and 17.
+Merged 16 and 17 without moving.
+Removing jump 213.
+Merging block 19 into block 18...
+Merged blocks 18 and 19.
+Merged 18 and 19 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 originPath+0 S8 A64])
+        (reg:DI 2 cx [ originPath ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":17:81 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 tempPathOut+0 S8 A64])
+        (reg:DI 1 dx [ tempPathOut ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":17:81 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 stringSize+0 S8 A64])
+        (reg:DI 36 r8 [ stringSize ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":17:81 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (parallel [
+            (set (reg/f:DI 109)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -560 [0xfffffffffffffdd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":19:10 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 110)
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":19:10 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 111)
+        (const_int 65 [0x41])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":19:10 -1
+     (nil))
+(insn 11 10 12 2 (parallel [
+            (set (reg:DI 111)
+                (const_int 0 [0]))
+            (set (reg/f:DI 109)
+                (plus:DI (ashift:DI (reg:DI 111)
+                        (const_int 3 [0x3]))
+                    (reg/f:DI 109)))
+            (set (mem/c:BLK (reg/f:DI 109) [5 tempPath+0 S520 A128])
+                (const_int 0 [0]))
+            (use (reg:DI 110))
+            (use (reg:DI 111))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":19:10 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 112)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 originPath+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":21:35 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 1 dx)
+        (const_int 92 [0x5c])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":21:35 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 2 cx)
+        (reg:DI 112)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":21:35 -1
+     (nil))
+(call_insn 15 14 16 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("wcsrchr") [flags 0x43]  <function_decl 0000000006801b00 wcsrchr>) [0 wcsrchr S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":21:35 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:SI (use (reg:SI 1 dx))
+            (nil))))
+(insn 16 15 17 2 (set (reg:DI 113)
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":21:35 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 fileName+0 S8 A64])
+        (reg:DI 113)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":21:35 -1
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg:DI 114)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1088 [0xfffffffffffffbc0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":22:20 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 36 r8)
+        (const_int 260 [0x104])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":22:20 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 1 dx)
+        (reg:DI 114)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":22:20 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 2 cx)
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":22:20 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 115)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_GetModuleFileNameW") [flags 0x2002]  <var_decl 00000000228563f0 D.122609>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":22:20 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("GetModuleFileNameW") [flags 0x441]  <function_decl 000000001e524f00 GetModuleFileNameW>)
+        (nil)))
+(call_insn 23 22 24 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 115) [0 GetModuleFileNameW S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":22:20 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:SI (use (reg:SI 36 r8))
+                (nil)))))
+(insn 24 23 25 2 (parallel [
+            (set (reg:DI 116)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1088 [0xfffffffffffffbc0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":23:10 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 1 dx)
+        (const_int 92 [0x5c])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":23:10 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:DI 2 cx)
+        (reg:DI 116)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":23:10 -1
+     (nil))
+(call_insn 27 26 28 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("wcsrchr") [flags 0x43]  <function_decl 0000000006801b00 wcsrchr>) [0 wcsrchr S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":23:10 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:SI (use (reg:SI 1 dx))
+            (nil))))
+(insn 28 27 29 2 (set (reg/f:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":23:10 -1
+     (nil))
+(insn 29 28 30 2 (set (mem:HI (reg/f:DI 82 [ _1 ]) [5 *_1+0 S2 A16])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":23:27 discrim 1 -1
+     (nil))
+(insn 30 29 31 2 (parallel [
+            (set (reg:DI 117)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1088 [0xfffffffffffffbc0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":26:8 -1
+     (nil))
+(insn 31 30 32 2 (parallel [
+            (set (reg:DI 118)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -560 [0xfffffffffffffdd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":26:8 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 1 dx)
+        (reg:DI 117)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":26:8 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:DI 2 cx)
+        (reg:DI 118)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":26:8 -1
+     (nil))
+(call_insn 34 33 35 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("wcscat") [flags 0x43]  <function_decl 00000000067f9e00 wcscat>) [0 wcscat S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":26:8 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 35 34 36 2 (set (reg:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 fileName+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":27:8 -1
+     (nil))
+(insn 36 35 37 2 (parallel [
+            (set (reg:DI 120)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -560 [0xfffffffffffffdd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":27:8 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:DI 1 dx)
+        (reg:DI 119)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":27:8 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:DI 2 cx)
+        (reg:DI 120)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":27:8 -1
+     (nil))
+(call_insn 39 38 40 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("wcscat") [flags 0x43]  <function_decl 00000000067f9e00 wcscat>) [0 wcscat S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":27:8 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 40 39 41 2 (parallel [
+            (set (reg:DI 121)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -560 [0xfffffffffffffdd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:DI 122)
+        (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 stringSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:DI 123)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 tempPathOut+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:DI 36 r8)
+        (reg:DI 121)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:DI 1 dx)
+        (reg:DI 122)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (nil))
+(insn 45 44 46 2 (set (reg:DI 2 cx)
+        (reg:DI 123)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (nil))
+(insn 46 45 47 2 (set (reg:DI 124)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_wcscpy_s") [flags 0x2002]  <var_decl 0000000022856480 D.122610>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("wcscpy_s") [flags 0x441]  <function_decl 000000000682b100 wcscpy_s>)
+        (nil)))
+(call_insn 47 46 48 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 124) [0 wcscpy_s S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":28:10 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 48 47 49 2 (set (reg:DI 125)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 originPath+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 -1
+     (nil))
+(insn 49 48 50 2 (set (reg:DI 126)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0000000022856510 *.LC1>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 -1
+     (nil))
+(insn 50 49 51 2 (set (reg:DI 1 dx)
+        (reg:DI 126)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0000000022856510 *.LC1>)
+        (nil)))
+(insn 51 50 52 2 (set (reg:DI 2 cx)
+        (reg:DI 125)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 -1
+     (nil))
+(insn 52 51 53 2 (set (reg:DI 127)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp__wfopen") [flags 0x2002]  <var_decl 00000000228565a0 D.122612>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_wfopen") [flags 0x441]  <function_decl 0000000006602900 _wfopen>)
+        (nil)))
+(call_insn 53 52 54 2 (set (reg:DI 0 ax)
+        (call (mem:QI (reg:DI 127) [0 _wfopen S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 54 53 55 2 (set (reg/f:DI 104 [ _41 ])
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 -1
+     (nil))
+(insn 55 54 56 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])
+        (reg/f:DI 104 [ _41 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":30:27 discrim 1 -1
+     (nil))
+(insn 56 55 57 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":31:2 -1
+     (nil))
+(jump_insn 57 56 58 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 65)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":31:2 -1
+     (nil)
+ -> 65)
+(note 58 57 59 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 4 (set (reg:DI 128)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0000000022856630 *.LC2>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":32:9 -1
+     (nil))
+(insn 60 59 61 4 (set (reg:DI 2 cx)
+        (reg:DI 128)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":32:9 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0000000022856630 *.LC2>)
+        (nil)))
+(call_insn 61 60 62 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 00000000065bdb00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":32:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 62 61 63 4 (set (reg:SI 103 [ _22 ])
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":33:10 -1
+     (nil))
+(jump_insn 63 62 64 4 (set (pc)
+        (label_ref:DI 210)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":33:10 997 {jump}
+     (nil)
+ -> 210)
+(barrier 64 63 65)
+(code_label 65 64 66 5 9 (nil) [1 uses])
+(note 66 65 67 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 5 (set (reg:DI 129)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":37:7 -1
+     (nil))
+(insn 68 67 69 5 (parallel [
+            (set (reg:DI 130)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1098 [0xfffffffffffffbb6])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":37:7 -1
+     (nil))
+(insn 69 68 70 5 (set (reg:DI 37 r9)
+        (reg:DI 129)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":37:7 -1
+     (nil))
+(insn 70 69 71 5 (set (reg:DI 36 r8)
+        (const_int 10 [0xa])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":37:7 -1
+     (nil))
+(insn 71 70 72 5 (set (reg:DI 1 dx)
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":37:7 -1
+     (nil))
+(insn 72 71 73 5 (set (reg:DI 2 cx)
+        (reg:DI 130)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":37:7 -1
+     (nil))
+(call_insn 73 72 74 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fread") [flags 0x43]  <function_decl 00000000065d1d00 fread>) [0 fread S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":37:7 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (expr_list:DI (use (reg:DI 37 r9))
+                    (nil))))))
+(insn 74 73 75 5 (parallel [
+            (set (reg:DI 131)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1098 [0xfffffffffffffbb6])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:13 -1
+     (nil))
+(insn 75 74 76 5 (set (reg:DI 36 r8)
+        (const_int 2 [0x2])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:13 -1
+     (nil))
+(insn 76 75 77 5 (set (reg:DI 132)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 00000000228566c0 *.LC3>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:13 -1
+     (nil))
+(insn 77 76 78 5 (set (reg:DI 1 dx)
+        (reg:DI 132)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:13 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 00000000228566c0 *.LC3>)
+        (nil)))
+(insn 78 77 79 5 (set (reg:DI 2 cx)
+        (reg:DI 131)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:13 -1
+     (nil))
+(call_insn/i 79 78 80 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strncmp") [flags 0x43]  <function_decl 0000000002ff2000 strncmp>) [0 __builtin_strncmp S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:13 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 80 79 81 5 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:13 -1
+     (nil))
+(insn 81 80 82 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:2 discrim 1 -1
+     (nil))
+(jump_insn 82 81 83 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 194)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":39:2 discrim 1 -1
+     (nil)
+ -> 194)
+(note 83 82 84 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 84 83 85 6 (set (reg:QI 84 [ _3 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1092 [0xfffffffffffffbbc])) [0 header[6]+0 S1 A16])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:35 -1
+     (nil))
+(insn 85 84 86 6 (set (reg:SI 85 [ _4 ])
+        (zero_extend:SI (reg:QI 84 [ _3 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:35 -1
+     (nil))
+(insn 86 85 87 6 (parallel [
+            (set (reg:SI 86 [ _5 ])
+                (ashift:SI (reg:SI 85 [ _4 ])
+                    (const_int 21 [0x15])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:37 -1
+     (nil))
+(insn 87 86 88 6 (set (reg:QI 87 [ _6 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1091 [0xfffffffffffffbbd])) [0 header[7]+0 S1 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:55 -1
+     (nil))
+(insn 88 87 89 6 (set (reg:SI 88 [ _7 ])
+        (zero_extend:SI (reg:QI 87 [ _6 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:55 -1
+     (nil))
+(insn 89 88 90 6 (parallel [
+            (set (reg:SI 89 [ _8 ])
+                (ashift:SI (reg:SI 88 [ _7 ])
+                    (const_int 14 [0xe])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:57 -1
+     (nil))
+(insn 90 89 91 6 (parallel [
+            (set (reg:SI 90 [ _9 ])
+                (ior:SI (reg:SI 86 [ _5 ])
+                    (reg:SI 89 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:44 -1
+     (nil))
+(insn 91 90 92 6 (set (reg:QI 91 [ _10 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1090 [0xfffffffffffffbbe])) [0 header[8]+0 S1 A16])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:75 -1
+     (nil))
+(insn 92 91 93 6 (set (reg:SI 92 [ _11 ])
+        (zero_extend:SI (reg:QI 91 [ _10 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:75 -1
+     (nil))
+(insn 93 92 94 6 (parallel [
+            (set (reg:SI 93 [ _12 ])
+                (ashift:SI (reg:SI 92 [ _11 ])
+                    (const_int 7 [0x7])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:77 -1
+     (nil))
+(insn 94 93 95 6 (parallel [
+            (set (reg:SI 94 [ _13 ])
+                (ior:SI (reg:SI 90 [ _9 ])
+                    (reg:SI 93 [ _12 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:64 -1
+     (nil))
+(insn 95 94 96 6 (set (reg:QI 95 [ _14 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1089 [0xfffffffffffffbbf])) [0 header[9]+0 S1 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:93 -1
+     (nil))
+(insn 96 95 97 6 (set (reg:SI 96 [ _15 ])
+        (zero_extend:SI (reg:QI 95 [ _14 ]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:93 -1
+     (nil))
+(insn 97 96 98 6 (parallel [
+            (set (reg:SI 97 [ _16 ])
+                (ior:SI (reg:SI 94 [ _13 ])
+                    (reg:SI 96 [ _15 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:83 -1
+     (nil))
+(insn 98 97 99 6 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 tagSize+0 S4 A32])
+        (reg:SI 97 [ _16 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":40:16 -1
+     (nil))
+(insn 99 98 100 6 (parallel [
+            (set (reg:DI 133)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -560 [0xfffffffffffffdd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 -1
+     (nil))
+(insn 100 99 101 6 (set (reg:DI 134)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0000000022856750 *.LC4>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 -1
+     (nil))
+(insn 101 100 102 6 (set (reg:DI 1 dx)
+        (reg:DI 134)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0000000022856750 *.LC4>)
+        (nil)))
+(insn 102 101 103 6 (set (reg:DI 2 cx)
+        (reg:DI 133)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 -1
+     (nil))
+(insn 103 102 104 6 (set (reg:DI 135)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp__wfopen") [flags 0x2002]  <var_decl 00000000228565a0 D.122612>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_wfopen") [flags 0x441]  <function_decl 0000000006602900 _wfopen>)
+        (nil)))
+(call_insn 104 103 105 6 (set (reg:DI 0 ax)
+        (call (mem:QI (reg:DI 135) [0 _wfopen S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 105 104 106 6 (set (reg/f:DI 105 [ _49 ])
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 -1
+     (nil))
+(insn 106 105 107 6 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [6 outputFile+0 S8 A128])
+        (reg/f:DI 105 [ _49 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":41:29 discrim 1 -1
+     (nil))
+(insn 107 106 108 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [6 outputFile+0 S8 A128])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":42:3 -1
+     (nil))
+(jump_insn 108 107 109 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 148)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":42:3 -1
+     (nil)
+ -> 148)
+(note 109 108 110 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 110 109 111 7 (set (reg:DI 136)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 00000000228567e0 *.LC5>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":43:10 -1
+     (nil))
+(insn 111 110 112 7 (set (reg:DI 2 cx)
+        (reg:DI 136)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":43:10 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 00000000228567e0 *.LC5>)
+        (nil)))
+(call_insn 112 111 113 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 00000000065bdb00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":43:10 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 113 112 114 7 (set (reg:DI 137)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":44:10 -1
+     (nil))
+(insn 114 113 115 7 (set (reg:DI 2 cx)
+        (reg:DI 137)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":44:10 -1
+     (nil))
+(call_insn 115 114 116 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x43]  <function_decl 00000000065c8d00 fclose>) [0 fclose S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":44:10 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 116 115 119 7 (set (reg:SI 98 [ stack.2_17 ])
+        (mem/c:SI (symbol_ref:DI ("stack") [flags 0x2]  <var_decl 000000002264d750 stack>) [1 stack+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":45:14 -1
+     (nil))
+(insn 119 116 120 7 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 98 [ stack.2_17 ])
+            (const_int 4 [0x4]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":45:4 -1
+     (nil))
+(jump_insn 120 119 121 7 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 138)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":45:4 -1
+     (nil)
+ -> 138)
+(note 121 120 122 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 122 121 123 8 (parallel [
+            (set (reg:DI 138)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -560 [0xfffffffffffffdd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":46:13 -1
+     (nil))
+(insn 123 122 124 8 (set (reg:DI 2 cx)
+        (reg:DI 138)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":46:13 -1
+     (nil))
+(insn 124 123 125 8 (set (reg:DI 139)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp__wremove") [flags 0x2002]  <var_decl 0000000022856870 D.122617>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":46:13 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_wremove") [flags 0x441]  <function_decl 0000000006602d00 _wremove>)
+        (nil)))
+(call_insn 125 124 126 8 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 139) [0 _wremove S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":46:13 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 126 125 127 8 (set (reg:DI 140)
+        (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 stringSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":47:14 -1
+     (nil))
+(insn 127 126 128 8 (set (reg:DI 141)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 tempPathOut+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":47:14 -1
+     (nil))
+(insn 128 127 129 8 (set (reg:DI 142)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 originPath+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":47:14 -1
+     (nil))
+(insn 129 128 130 8 (set (reg:DI 36 r8)
+        (reg:DI 140)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":47:14 -1
+     (nil))
+(insn 130 129 131 8 (set (reg:DI 1 dx)
+        (reg:DI 141)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":47:14 -1
+     (nil))
+(insn 131 130 132 8 (set (reg:DI 2 cx)
+        (reg:DI 142)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":47:14 -1
+     (nil))
+(call_insn 132 131 133 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z9RemoveTagPKwPwy") [flags 0x3]  <function_decl 0000000022692700 RemoveTag>) [0 RemoveTag S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":47:14 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 133 132 134 8 (set (reg:SI 99 [ stack.3_18 ])
+        (mem/c:SI (symbol_ref:DI ("stack") [flags 0x2]  <var_decl 000000002264d750 stack>) [1 stack+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":48:10 -1
+     (nil))
+(insn 134 133 135 8 (parallel [
+            (set (reg:SI 100 [ _19 ])
+                (plus:SI (reg:SI 99 [ stack.3_18 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":48:10 -1
+     (nil))
+(insn 135 134 136 8 (set (mem/c:SI (symbol_ref:DI ("stack") [flags 0x2]  <var_decl 000000002264d750 stack>) [1 stack+0 S4 A32])
+        (reg:SI 100 [ _19 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":48:10 -1
+     (nil))
+(jump_insn 136 135 137 8 (set (pc)
+        (label_ref 143)) -1
+     (nil)
+ -> 143)
+(barrier 137 136 138)
+(code_label 138 137 139 9 13 (nil) [1 uses])
+(note 139 138 140 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 140 139 141 9 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":51:9 -1
+     (nil))
+(call_insn 141 140 142 9 (call (mem:QI (symbol_ref:DI ("exit") [flags 0x43]  <function_decl 000000000301eb00 exit>) [0 __builtin_exit S1 A8])
+        (const_int 32 [0x20])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":51:9 -1
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(barrier 142 141 143)
+(code_label 143 142 144 10 14 (nil) [1 uses])
+(note 144 143 145 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 145 144 146 10 (set (reg:SI 103 [ _22 ])
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":52:11 -1
+     (nil))
+(jump_insn 146 145 147 10 (set (pc)
+        (label_ref:DI 210)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":52:11 discrim 1 997 {jump}
+     (nil)
+ -> 210)
+(barrier 147 146 148)
+(code_label 148 147 149 11 12 (nil) [1 uses])
+(note 149 148 150 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 150 149 151 11 (set (reg:SI 143)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 tagSize+0 S4 A32])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:23 -1
+     (nil))
+(insn 151 150 152 11 (parallel [
+            (set (reg:SI 101 [ _20 ])
+                (plus:SI (reg:SI 143)
+                    (const_int 10 [0xa])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:23 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [1 tagSize+0 S4 A32])
+            (const_int 10 [0xa]))
+        (nil)))
+(insn 152 151 153 11 (set (reg:SI 102 [ _21 ])
+        (reg:SI 101 [ _20 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:8 -1
+     (nil))
+(insn 153 152 154 11 (set (reg:DI 144)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:8 -1
+     (nil))
+(insn 154 153 155 11 (set (reg:SI 36 r8)
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:8 -1
+     (nil))
+(insn 155 154 156 11 (set (reg:SI 1 dx)
+        (reg:SI 102 [ _21 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:8 -1
+     (nil))
+(insn 156 155 157 11 (set (reg:DI 2 cx)
+        (reg:DI 144)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:8 -1
+     (nil))
+(call_insn 157 156 158 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fseek") [flags 0x43]  <function_decl 00000000065d8200 fseek>) [0 fseek S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":54:8 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:SI (use (reg:SI 1 dx))
+            (expr_list:SI (use (reg:SI 36 r8))
+                (nil)))))
+(jump_insn 158 157 159 11 (set (pc)
+        (label_ref 169)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:3 -1
+     (nil)
+ -> 169)
+(barrier 159 158 182)
+(code_label 182 159 160 12 16 (nil) [1 uses])
+(note 160 182 161 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 161 160 162 12 (set (reg:DI 145)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [6 outputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil))
+(insn 162 161 163 12 (set (reg:DI 146)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [7 bytesRead+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil))
+(insn 163 162 164 12 (parallel [
+            (set (reg:DI 147)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -2128 [0xfffffffffffff7b0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil))
+(insn 164 163 165 12 (set (reg:DI 37 r9)
+        (reg:DI 145)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil))
+(insn 165 164 166 12 (set (reg:DI 36 r8)
+        (reg:DI 146)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil))
+(insn 166 165 167 12 (set (reg:DI 1 dx)
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil))
+(insn 167 166 168 12 (set (reg:DI 2 cx)
+        (reg:DI 147)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil))
+(call_insn 168 167 169 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fwrite") [flags 0x43]  <function_decl 0000000002ff8000 fwrite>) [0 __builtin_fwrite S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":59:10 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (expr_list:DI (use (reg:DI 37 r9))
+                    (nil))))))
+(code_label 169 168 170 13 15 (nil) [1 uses])
+(note 170 169 171 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 171 170 172 13 (set (reg:DI 148)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil))
+(insn 172 171 173 13 (parallel [
+            (set (reg:DI 149)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -2128 [0xfffffffffffff7b0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil))
+(insn 173 172 174 13 (set (reg:DI 37 r9)
+        (reg:DI 148)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil))
+(insn 174 173 175 13 (set (reg:DI 36 r8)
+        (const_int 1024 [0x400])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil))
+(insn 175 174 176 13 (set (reg:DI 1 dx)
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil))
+(insn 176 175 177 13 (set (reg:DI 2 cx)
+        (reg:DI 149)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil))
+(call_insn 177 176 178 13 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fread") [flags 0x43]  <function_decl 00000000065d1d00 fread>) [0 fread S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (expr_list:DI (use (reg:DI 37 r9))
+                    (nil))))))
+(insn 178 177 179 13 (set (reg:DI 106 [ _53 ])
+        (reg:DI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 -1
+     (nil))
+(insn 179 178 180 13 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [7 bytesRead+0 S8 A64])
+        (reg:DI 106 [ _53 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:28 discrim 1 -1
+     (nil))
+(insn 180 179 181 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -40 [0xffffffffffffffd8])) [7 bytesRead+0 S8 A64])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:68 discrim 1 -1
+     (nil))
+(insn 181 180 183 13 (set (reg:QI 107 [ retval.4_55 ])
+        (ne:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:68 discrim 1 -1
+     (nil))
+(insn 183 181 184 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 107 [ retval.4_55 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:68 discrim 1 -1
+     (nil))
+(jump_insn 184 183 185 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 182)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":58:68 discrim 1 -1
+     (nil)
+ -> 182)
+(note 185 184 186 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 186 185 187 14 (set (reg:DI 150)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":62:9 -1
+     (nil))
+(insn 187 186 188 14 (set (reg:DI 2 cx)
+        (reg:DI 150)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":62:9 -1
+     (nil))
+(call_insn 188 187 189 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x43]  <function_decl 00000000065c8d00 fclose>) [0 fclose S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":62:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 189 188 190 14 (set (reg:DI 151)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [6 outputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":63:9 -1
+     (nil))
+(insn 190 189 191 14 (set (reg:DI 2 cx)
+        (reg:DI 151)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":63:9 -1
+     (nil))
+(call_insn 191 190 192 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x43]  <function_decl 00000000065c8d00 fclose>) [0 fclose S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":63:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(jump_insn 192 191 193 14 (set (pc)
+        (label_ref 205)) -1
+     (nil)
+ -> 205)
+(barrier 193 192 194)
+(code_label 194 193 195 15 11 (nil) [1 uses])
+(note 195 194 196 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 196 195 197 15 (set (reg:DI 152)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0000000022856900 *.LC6>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":66:9 -1
+     (nil))
+(insn 197 196 198 15 (set (reg:DI 2 cx)
+        (reg:DI 152)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":66:9 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0000000022856900 *.LC6>)
+        (nil)))
+(call_insn 198 197 199 15 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 00000000065bdb00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":66:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 199 198 200 15 (set (reg:DI 153)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [6 inputFile+0 S8 A128])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":67:9 -1
+     (nil))
+(insn 200 199 201 15 (set (reg:DI 2 cx)
+        (reg:DI 153)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":67:9 -1
+     (nil))
+(call_insn 201 200 202 15 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x43]  <function_decl 00000000065c8d00 fclose>) [0 fclose S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":67:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 202 201 203 15 (set (reg:SI 103 [ _22 ])
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":68:10 -1
+     (nil))
+(jump_insn 203 202 204 15 (set (pc)
+        (label_ref:DI 210)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":68:10 997 {jump}
+     (nil)
+ -> 210)
+(barrier 204 203 205)
+(code_label 205 204 206 16 17 (nil) [1 uses])
+(note 206 205 207 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 207 206 210 16 (set (reg:SI 103 [ _22 ])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":70:9 -1
+     (nil))
+(code_label 210 207 211 18 18 (nil) [3 uses])
+(note 211 210 212 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 212 211 216 18 (set (reg:SI 108 [ <retval> ])
+        (reg:SI 103 [ _22 ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":71:1 -1
+     (nil))
+(insn 216 212 217 18 (set (reg/i:SI 0 ax)
+        (reg:SI 108 [ <retval> ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":71:1 -1
+     (nil))
+(insn 217 216 0 18 (use (reg/i:SI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":71:1 -1
+     (nil))
+
+;; Function DeleteTempFile (_Z14DeleteTempFilev, funcdef_no=6907, decl_uid=122504, cgraph_uid=6850, symbol_order=7504)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg:DI 82)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -272 [0xfffffffffffffef0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":75:10 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 36 r8)
+        (const_int 260 [0x104])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":75:10 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 83)
+        (symbol_ref:DI ("rmPath") [flags 0x2]  <var_decl 000000002264d630 rmPath>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":75:10 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 1 dx)
+        (reg:DI 83)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":75:10 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("rmPath") [flags 0x2]  <var_decl 000000002264d630 rmPath>)
+        (nil)))
+(insn 9 8 10 2 (set (reg:DI 2 cx)
+        (reg:DI 82)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":75:10 -1
+     (nil))
+(call_insn 10 9 11 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("wcstombs") [flags 0x43]  <function_decl 0000000006689700 wcstombs>) [0 wcstombs S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":75:10 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 11 10 12 2 (parallel [
+            (set (reg:DI 84)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -272 [0xfffffffffffffef0])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":76:8 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 2 cx)
+        (reg:DI 84)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":76:8 -1
+     (nil))
+(call_insn 13 12 0 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("remove") [flags 0x43]  <function_decl 00000000065dd600 remove>) [0 remove S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":76:8 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+
+;; Function SaveTemporaryMP3 (_Z16SaveTemporaryMP3PKwPwy, funcdef_no=6908, decl_uid=122510, cgraph_uid=6851, symbol_order=7505)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 path+0 S8 A64])
+        (reg:DI 2 cx [ path ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":79:85 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 tempPathOut+0 S8 A64])
+        (reg:DI 1 dx [ tempPathOut ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":79:85 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 stringSize+0 S8 A64])
+        (reg:DI 36 r8 [ stringSize ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":79:85 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:DI 82)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 tempPathOut+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 83)
+        (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 stringSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 36 r8)
+        (reg:DI 82)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 1 dx)
+        (reg:DI 83)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 84)
+        (symbol_ref:DI ("rmPath") [flags 0x2]  <var_decl 000000002264d630 rmPath>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 2 cx)
+        (reg:DI 84)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("rmPath") [flags 0x2]  <var_decl 000000002264d630 rmPath>)
+        (nil)))
+(insn 14 13 15 2 (set (reg:DI 85)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_wcscpy_s") [flags 0x2002]  <var_decl 0000000022856480 D.122610>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("wcscpy_s") [flags 0x441]  <function_decl 000000000682b100 wcscpy_s>)
+        (nil)))
+(call_insn 15 14 16 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 85) [0 wcscpy_s S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":80:10 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 16 15 17 2 (set (reg:DI 86)
+        (symbol_ref:DI ("_Z14DeleteTempFilev") [flags 0x3]  <function_decl 0000000022692900 DeleteTempFile>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":81:8 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 2 cx)
+        (reg:DI 86)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":81:8 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_Z14DeleteTempFilev") [flags 0x3]  <function_decl 0000000022692900 DeleteTempFile>)
+        (nil)))
+(call_insn 18 17 19 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atexit") [flags 0x43]  <function_decl 0000000006671a00 atexit>) [0 atexit S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":81:8 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 19 18 20 2 (set (reg:DI 87)
+        (mem/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 stringSize+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":82:11 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 tempPathOut+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":82:11 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 89)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 path+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":82:11 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 36 r8)
+        (reg:DI 87)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":82:11 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:DI 1 dx)
+        (reg:DI 88)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":82:11 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 2 cx)
+        (reg:DI 89)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":82:11 -1
+     (nil))
+(call_insn 25 24 26 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z9RemoveTagPKwPwy") [flags 0x3]  <function_decl 0000000022692700 RemoveTag>) [0 RemoveTag S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":82:11 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 36 r8))
+                (nil)))))
+(insn 26 25 27 2 (set (reg:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 tempPathOut+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":83:15 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 2 cx)
+        (reg:DI 90)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":83:15 -1
+     (nil))
+(call_insn 28 27 0 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z13SetFileHiddenPKw") [flags 0x3]  <function_decl 0000000022692500 SetFileHidden>) [0 SetFileHidden S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":83:15 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+
+;; Function OpenFileDialog (_Z14OpenFileDialogPw, funcdef_no=6909, decl_uid=122513, cgraph_uid=6852, symbol_order=7506)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 35 from 6 to 7.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 filePath+0 S8 A64])
+        (reg:DI 2 cx [ filePath ])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":86:40 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (parallel [
+            (set (reg:DI 84)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":89:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 36 r8)
+        (const_int 152 [0x98])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":89:2 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":89:2 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 2 cx)
+        (reg:DI 84)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":89:2 -1
+     (nil))
+(call_insn 10 9 11 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x43]  <function_decl 0000000002feb300 memset>) [0 __builtin_memset S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":89:2 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 2 cx))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (expr_list:DI (use (reg:DI 36 r8))
+                    (nil))))))
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [10 ofn.hwndOwner+0 S8 A64])
+        (const_int 0 [0])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":91:16 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -160 [0xffffffffffffff60])) [9 ofn.lStructSize+0 S4 A128])
+        (const_int 152 [0x98])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":92:18 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 85)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 filePath+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":93:16 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -112 [0xffffffffffffff90])) [4 ofn.lpstrFile+0 S8 A128])
+        (reg/f:DI 85)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":93:16 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [9 ofn.nMaxFile+0 S4 A64])
+        (const_int 260 [0x104])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":94:15 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:DI 86)
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0000000022849bd0 *.LC7>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":95:18 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [4 ofn.lpstrFilter+0 S8 A64])
+        (reg/f:DI 86)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":95:18 -1
+     (nil))
+(insn 18 17 19 2 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -60 [0xffffffffffffffc4])) [5 ofn.nFileOffset+0 S2 A32])
+        (const_int 1 [0x1])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":96:18 -1
+     (nil))
+(insn 19 18 20 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -64 [0xffffffffffffffc0])) [9 ofn.Flags+0 S4 A128])
+        (const_int 6144 [0x1800])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":97:12 -1
+     (nil))
+(insn 20 19 21 2 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:22 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 2 cx)
+        (reg:DI 87)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:22 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 88)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_GetOpenFileNameW") [flags 0x2002]  <var_decl 0000000022849c60 D.122620>) [3  S8 A8])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:22 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("GetOpenFileNameW") [flags 0x441]  <function_decl 00000000106d3c00 GetOpenFileNameW>)
+        (nil)))
+(call_insn 23 22 24 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 88) [0 GetOpenFileNameW S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:22 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 24 23 25 2 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:22 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:22 discrim 1 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:QI 83 [ retval.5_16 ])
+        (ne:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:22 discrim 1 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 83 [ retval.5_16 ])
+            (const_int 0 [0]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:2 discrim 1 -1
+     (nil))
+(jump_insn 28 27 29 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":99:2 discrim 1 -1
+     (nil)
+ -> 37)
+(note 29 28 30 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 4 (set (reg:DI 89)
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 filePath+0 S8 A64])) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":100:10 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:DI 1 dx)
+        (reg:DI 89)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":100:10 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:DI 90)
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0000000022849cf0 *.LC8>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":100:10 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:DI 2 cx)
+        (reg:DI 90)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":100:10 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0000000022849cf0 *.LC8>)
+        (nil)))
+(call_insn 34 33 35 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("wprintf") [flags 0x1]  <function_decl 00000000065eee00 wprintf>) [0 wprintf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":100:10 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(jump_insn 35 34 36 4 (set (pc)
+        (label_ref:DI 44)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":100:10 997 {jump}
+     (nil)
+ -> 44)
+(barrier 36 35 37)
+(code_label 37 36 38 5 22 (nil) [1 uses])
+(note 38 37 39 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 40 5 (set (reg:DI 91)
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0000000022849d80 *.LC9>)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":102:9 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:DI 2 cx)
+        (reg:DI 91)) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":102:9 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0000000022849d80 *.LC9>)
+        (nil)))
+(call_insn 41 40 44 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_Z6printfPKcz") [flags 0x1]  <function_decl 00000000065bdb00 printf>) [0 printf S1 A8])
+            (const_int 32 [0x20]))) "C:/Users/shaper/source/repos/cPlayer_practice/cPlayer_practice/fileManager.cpp":102:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(code_label 44 41 45 7 21 (nil) [1 uses])
+(note 45 44 0 7 [bb 7] NOTE_INSN_BASIC_BLOCK)

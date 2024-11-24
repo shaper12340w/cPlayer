@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: manageConsole.cpp ÏÜåÏä§ ÌååÏùº</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Îã§ÏùåÏóê ÏùòÌï¥ ÏÉùÏÑ±Îê® :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Í≤ÄÏÉâ',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('manage_console_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Î°úÎî©Ï§ë...</div>
+<div class="SRStatus" id="Searching">Í≤ÄÏÉâÏ§ë...</div>
+<div class="SRStatus" id="NoMatches">ÏùºÏπòÌïòÎäîÍ≤É ÏóÜÏùå</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">manageConsole.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="manage_console_8cpp.html">Ïù¥ ÌååÏùºÏùò Î¨∏ÏÑúÌôî ÌéòÏù¥ÏßÄÎ°ú Í∞ÄÍ∏∞</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;tchar.h&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;psapi.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="player_u_i_8h.html">playerUI.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="manage_console_8cpp.html#a2a6e8d5b4a7b92c6f8e6c9b837b7d1c9">    7</a></span>BOOL CALLBACK <a class="code hl_function" href="manage_console_8cpp.html#a2a6e8d5b4a7b92c6f8e6c9b837b7d1c9">EnumWindowsProc</a>(HWND hwnd, LPARAM lParam) {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    DWORD processId;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    GetWindowThreadProcessId(hwnd, &amp;processId);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    HANDLE processHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, processId);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">if</span> (processHandle) {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        TCHAR processName[MAX_PATH] = { 0 };</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">if</span> (GetModuleBaseName(processHandle, NULL, processName, MAX_PATH)) {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="comment">// «¡∑ŒººΩ∫ ¿Ã∏ß¿Ã WindowsTerminal.exe¿Œ¡ˆ »Æ¿Œ</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">if</span> (_tcsicmp(processName, _T(<span class="stringliteral">&quot;WindowsTerminal.exe&quot;</span>)) == 0) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                HWND* targetHwnd = (HWND*)lParam;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                *targetHwnd = hwnd; <span class="comment">// πﬂ∞ﬂ«— «⁄µÈ¿ª ¿˙¿Â</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                CloseHandle(processHandle);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="keywordflow">return</span> FALSE;       <span class="comment">// ≈Ωªˆ ¡æ∑·</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        CloseHandle(processHandle);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> TRUE; <span class="comment">// ∞Ëº” ≈Ωªˆ</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="manage_console_8cpp.html#ae28154de2cff99671355effbe35dc415">   28</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="manage_console_8cpp.html#ae28154de2cff99671355effbe35dc415">CheckConsoleRegistry</a>() {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    HKEY hkey;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    DWORD dwSize;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">char</span> value[256];</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (RegOpenKeyEx(HKEY_CURRENT_USER, TEXT(<span class="stringliteral">&quot;CONSOLE\\%%Startup&quot;</span>), 0, KEY_READ, &amp;hkey) != ERROR_SUCCESS) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="player_u_i_8cpp.html#a409471bd6e26238b55939ea334bf2478">clearLine</a>(6); <a class="code hl_function" href="player_u_i_8cpp.html#a9d1008cd1f195593b51aa49bd912dac1">uprintf</a>(6, L<span class="stringliteral">&quot;∑π¡ˆΩ∫∆Æ∏Æ∏¶ ø©¥¬ ∞˙¡§ø°º≠ ø¿∑˘∞° πﬂª˝«ﬂΩ¿¥œ¥Ÿ&quot;</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    dwSize = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> (RegQueryValueEx(hkey, TEXT(<span class="stringliteral">&quot;DelegationConsole&quot;</span>), NULL, NULL, (LPBYTE)value, &amp;dwSize) == ERROR_SUCCESS) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span> (strcmp(value, <span class="stringliteral">&quot;{2EACA947-7F5F-4CFA-BA87-8F7FBEEFBE69}&quot;</span>) == 0) <span class="comment">//WIndows Terminal¿Ã ±‚∫ª ≈ÕπÃ≥Œ¿Œ∞°</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> 0; <span class="comment">//yes</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> 1; <span class="comment">//no</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="manage_console_8cpp.html#aa486752d2d0070676af70f863c3475a9">   50</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="manage_console_8cpp.html#aa486752d2d0070676af70f863c3475a9">resizeWindow</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    HWND targetHwnd = NULL;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">switch</span> (<a class="code hl_function" href="manage_console_8cpp.html#ae28154de2cff99671355effbe35dc415">CheckConsoleRegistry</a>()) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        EnumWindows(<a class="code hl_function" href="manage_console_8cpp.html#a2a6e8d5b4a7b92c6f8e6c9b837b7d1c9">EnumWindowsProc</a>, (LPARAM)&amp;targetHwnd);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (targetHwnd == NULL) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_function" href="player_u_i_8cpp.html#a409471bd6e26238b55939ea334bf2478">clearLine</a>(6); <a class="code hl_function" href="player_u_i_8cpp.html#a9d1008cd1f195593b51aa49bd912dac1">uprintf</a>(6, L<span class="stringliteral">&quot;WindowsTerminal √¢¿ª √£¿ª ºˆ æ¯Ω¿¥œ¥Ÿ.\n&quot;</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        MoveWindow(targetHwnd, 100, 100, width*10, height*40, TRUE);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">char</span> buffer[256];</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        sprintf_s(buffer,<span class="stringliteral">&quot;mode con cols=%d lines=%d&quot;</span>,width,height);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        system(buffer);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="ttc" id="amanage_console_8cpp_html_a2a6e8d5b4a7b92c6f8e6c9b837b7d1c9"><div class="ttname"><a href="manage_console_8cpp.html#a2a6e8d5b4a7b92c6f8e6c9b837b7d1c9">EnumWindowsProc</a></div><div class="ttdeci">BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam)</div><div class="ttdef"><b>Definition</b> <a href="#l00007">manageConsole.cpp:7</a></div></div>
+<div class="ttc" id="amanage_console_8cpp_html_aa486752d2d0070676af70f863c3475a9"><div class="ttname"><a href="manage_console_8cpp.html#aa486752d2d0070676af70f863c3475a9">resizeWindow</a></div><div class="ttdeci">void resizeWindow(int width, int height)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">manageConsole.cpp:50</a></div></div>
+<div class="ttc" id="amanage_console_8cpp_html_ae28154de2cff99671355effbe35dc415"><div class="ttname"><a href="manage_console_8cpp.html#ae28154de2cff99671355effbe35dc415">CheckConsoleRegistry</a></div><div class="ttdeci">int CheckConsoleRegistry()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">manageConsole.cpp:28</a></div></div>
+<div class="ttc" id="aplayer_u_i_8cpp_html_a409471bd6e26238b55939ea334bf2478"><div class="ttname"><a href="player_u_i_8cpp.html#a409471bd6e26238b55939ea334bf2478">clearLine</a></div><div class="ttdeci">void clearLine(int line)</div><div class="ttdef"><b>Definition</b> <a href="player_u_i_8cpp_source.html#l00055">playerUI.cpp:55</a></div></div>
+<div class="ttc" id="aplayer_u_i_8cpp_html_a9d1008cd1f195593b51aa49bd912dac1"><div class="ttname"><a href="player_u_i_8cpp.html#a9d1008cd1f195593b51aa49bd912dac1">uprintf</a></div><div class="ttdeci">void uprintf(int line, const wchar_t *str,...)</div><div class="ttdef"><b>Definition</b> <a href="player_u_i_8cpp_source.html#l00041">playerUI.cpp:41</a></div></div>
+<div class="ttc" id="aplayer_u_i_8h_html"><div class="ttname"><a href="player_u_i_8h.html">playerUI.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="manage_console_8cpp.html">manageConsole.cpp</a></li>
+    <li class="footer">Îã§ÏùåÏóê ÏùòÌï¥ ÏÉùÏÑ±Îê® :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

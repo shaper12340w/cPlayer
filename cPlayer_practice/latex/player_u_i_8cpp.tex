@@ -1,0 +1,386 @@
+\doxysection{player\+UI.\+cpp 파일 참조}
+\hypertarget{player_u_i_8cpp}{}\label{player_u_i_8cpp}\index{playerUI.cpp@{playerUI.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}music\+Player.\+h"{}}\newline
+{\ttfamily \#include "{}dynamic\+Array.\+h"{}}\newline
+player\+UI.\+cpp에 대한 include 의존 그래프
+% FIG 0
+\doxysubsubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{player_u_i_8cpp_af08ec37a8c99d747fb60fa15bc28678b}{\+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2}{Update\+Type}} \{ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a4b9cbb1973cac4ff0f9293456aaea7f5}{Update\+Clear}}
+, \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a0c3781db7c57eccc3e9a36fd1e3be417}{Update\+All}}
+, \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a22fef927f371e78d0907d893404c09da}{Update\+Time}}
+, \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a6eec3850dd6c622acb6b5cbd870fe31e}{Update\+Status}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+wchar\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{player_u_i_8cpp_a48b1492fdf363f1f37b5ffc848675333}{Ms\+To\+Time}} (int ms)
+\item 
+void \mbox{\hyperlink{player_u_i_8cpp_ae824443b3f661414ba1f2718e17fe97d}{gotoxy}} (int x, int y)
+\item 
+void \mbox{\hyperlink{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1}{uprintf}} (int line, const wchar\+\_\+t \texorpdfstring{$\ast$}{*}str,...)
+\item 
+void \mbox{\hyperlink{player_u_i_8cpp_a409471bd6e26238b55939ea334bf2478}{clear\+Line}} (int line)
+\item 
+const wchar\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{player_u_i_8cpp_ab9c720975515aafcf675c1ff320c3fc5}{Get\+MP3\+Name}} (const wchar\+\_\+t \texorpdfstring{$\ast$}{*}name)
+\item 
+void \mbox{\hyperlink{player_u_i_8cpp_ab85eb234069b16b4ee6aa80ca34faeef}{read\+Click}} (int \texorpdfstring{$\ast$}{*}x, int \texorpdfstring{$\ast$}{*}y)
+\item 
+void \mbox{\hyperlink{player_u_i_8cpp_a0ed0f34fce6fb0d1c106dc480f61790a}{Update\+UI}} (\mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2}{Update\+Type}} type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+COORD \mbox{\hyperlink{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462}{coord}} = \{ 0, 0 \}
+\item 
+HANDLE \mbox{\hyperlink{player_u_i_8cpp_af5fbc6739e38812f81e08dd0812579f5}{output\+Handle}} = Get\+Std\+Handle(STD\+\_\+\+OUTPUT\+\_\+\+HANDLE)
+\item 
+HANDLE \mbox{\hyperlink{player_u_i_8cpp_a04a540185a8eba76b477fa17d65e8541}{input\+Handle}} = Get\+Std\+Handle(STD\+\_\+\+INPUT\+\_\+\+HANDLE)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\Hypertarget{player_u_i_8cpp_af08ec37a8c99d747fb60fa15bc28678b}\index{playerUI.cpp@{playerUI.cpp}!\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}}
+\index{\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{\_CRT\_SECURE\_NO\_WARNINGS}{\_CRT\_SECURE\_NO\_WARNINGS}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_af08ec37a8c99d747fb60fa15bc28678b} 
+\#define \+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00001}{1}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{열거형 타입 문서화}
+\Hypertarget{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2}\index{playerUI.cpp@{playerUI.cpp}!UpdateType@{UpdateType}}
+\index{UpdateType@{UpdateType}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateType}{UpdateType}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2} 
+enum \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2}{Update\+Type}}}
+
+\begin{DoxyEnumFields}[2]{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateClear@{UpdateClear}!playerUI.cpp@{playerUI.cpp}}\index{playerUI.cpp@{playerUI.cpp}!UpdateClear@{UpdateClear}}}\Hypertarget{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a4b9cbb1973cac4ff0f9293456aaea7f5}\label{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2} 
+Update\+Clear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateAll@{UpdateAll}!playerUI.cpp@{playerUI.cpp}}\index{playerUI.cpp@{playerUI.cpp}!UpdateAll@{UpdateAll}}}\Hypertarget{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a0c3781db7c57eccc3e9a36fd1e3be417}\label{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2} 
+Update\+All&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateTime@{UpdateTime}!playerUI.cpp@{playerUI.cpp}}\index{playerUI.cpp@{playerUI.cpp}!UpdateTime@{UpdateTime}}}\Hypertarget{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a22fef927f371e78d0907d893404c09da}\label{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2} 
+Update\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateStatus@{UpdateStatus}!playerUI.cpp@{playerUI.cpp}}\index{playerUI.cpp@{playerUI.cpp}!UpdateStatus@{UpdateStatus}}}\Hypertarget{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a6eec3850dd6c622acb6b5cbd870fe31e}\label{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2} 
+Update\+Status&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a4b9cbb1973cac4ff0f9293456aaea7f5}{UpdateClear}},}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a0c3781db7c57eccc3e9a36fd1e3be417}{UpdateAll}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a22fef927f371e78d0907d893404c09da}{UpdateTime}},}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a6eec3850dd6c622acb6b5cbd870fe31e}{UpdateStatus}},}
+\DoxyCodeLine{00013\ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{함수 문서화}
+\Hypertarget{player_u_i_8cpp_a409471bd6e26238b55939ea334bf2478}\index{playerUI.cpp@{playerUI.cpp}!clearLine@{clearLine}}
+\index{clearLine@{clearLine}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{clearLine()}{clearLine()}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_a409471bd6e26238b55939ea334bf2478} 
+void clear\+Line (\begin{DoxyParamCaption}\item[{int}]{line}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00055}{55}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ CONSOLE\_SCREEN\_BUFFER\_INFO\ csbi;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (!GetConsoleScreenBufferInfo(\mbox{\hyperlink{player_u_i_8cpp_af5fbc6739e38812f81e08dd0812579f5}{outputHandle}},\ \&csbi))\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error\ getting\ console\ buffer\ info.\(\backslash\)n"{}});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ DWORD\ lineWidth\ =\ csbi.dwSize.X;}
+\DoxyCodeLine{00062\ \ \ \ \ DWORD\ charsWritten;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ 공백으로\ 덮을\ 문자열\ 생성}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}*\ blankLine\ =\ (\textcolor{keywordtype}{wchar\_t}*)malloc((lineWidth\ +\ 1)\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}));}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (DWORD\ i\ =\ 0;\ i\ <\ lineWidth;\ i++)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ blankLine[i]\ =\ L\textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ blankLine[lineWidth]\ =\ L\textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ 문자열\ 끝\ 지정}}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_ae824443b3f661414ba1f2718e17fe97d}{gotoxy}}(0,\ line);}
+\DoxyCodeLine{00070\ \ \ \ \ WriteConsoleOutputCharacterW(\mbox{\hyperlink{player_u_i_8cpp_af5fbc6739e38812f81e08dd0812579f5}{outputHandle}},\ blankLine,\ lineWidth,\ \mbox{\hyperlink{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462}{coord}},\ \&charsWritten);}
+\DoxyCodeLine{00071\ \ \ \ \ free(blankLine);}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\Hypertarget{player_u_i_8cpp_ab9c720975515aafcf675c1ff320c3fc5}\index{playerUI.cpp@{playerUI.cpp}!GetMP3Name@{GetMP3Name}}
+\index{GetMP3Name@{GetMP3Name}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{GetMP3Name()}{GetMP3Name()}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_ab9c720975515aafcf675c1ff320c3fc5} 
+const wchar\+\_\+t \texorpdfstring{$\ast$}{*} Get\+MP3\+Name (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00074}{74}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (name\ ==\ NULL)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;\ \textcolor{comment}{//\ 유효하지\ 않은\ 입력\ 처리}}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}*\ lastSlash\ =\ wcsrchr(name,\ L\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'});}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{if}\ (lastSlash\ ==\ NULL)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ name;\ \textcolor{comment}{//\ 경로\ 구분자가\ 없으면\ 전체\ 문자열\ 반환}}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{return}\ lastSlash\ +\ 1;}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\Hypertarget{player_u_i_8cpp_ae824443b3f661414ba1f2718e17fe97d}\index{playerUI.cpp@{playerUI.cpp}!gotoxy@{gotoxy}}
+\index{gotoxy@{gotoxy}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{gotoxy()}{gotoxy()}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_ae824443b3f661414ba1f2718e17fe97d} 
+void gotoxy (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00035}{35}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462}{coord}}.X\ =\ x;\ \textcolor{comment}{//\ 열\ 위치}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462}{coord}}.Y\ =\ y;\ \textcolor{comment}{//\ 행\ 위치}}
+\DoxyCodeLine{00038\ \ \ \ \ SetConsoleCursorPosition(\mbox{\hyperlink{player_u_i_8cpp_af5fbc6739e38812f81e08dd0812579f5}{outputHandle}},\ \mbox{\hyperlink{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462}{coord}});}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\Hypertarget{player_u_i_8cpp_a48b1492fdf363f1f37b5ffc848675333}\index{playerUI.cpp@{playerUI.cpp}!MsToTime@{MsToTime}}
+\index{MsToTime@{MsToTime}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{MsToTime()}{MsToTime()}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_a48b1492fdf363f1f37b5ffc848675333} 
+wchar\+\_\+t \texorpdfstring{$\ast$}{*} Ms\+To\+Time (\begin{DoxyParamCaption}\item[{int}]{ms}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00019}{19}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}*\ buffer\ =\ (\textcolor{keywordtype}{wchar\_t}*)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t})\ *\ 20);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ total\_seconds\ =\ ms\ /\ 1000;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ seconds\ =\ total\_seconds\ \%\ 60;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ minutes\ =\ (total\_seconds\ /\ 60)\ \%\ 60;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ hours\ =\ total\_seconds\ /\ 3600;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (hours\ >\ 0)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ swprintf(buffer,\ 20,\ L\textcolor{stringliteral}{"{}\%02d:\%02d:\%02d"{}},\ hours,\ minutes,\ seconds);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ swprintf(buffer,\ 20,\ L\textcolor{stringliteral}{"{}\%02d:\%02d"{}},\ minutes,\ seconds);}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{return}\ buffer;}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\Hypertarget{player_u_i_8cpp_ab85eb234069b16b4ee6aa80ca34faeef}\index{playerUI.cpp@{playerUI.cpp}!readClick@{readClick}}
+\index{readClick@{readClick}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{readClick()}{readClick()}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_ab85eb234069b16b4ee6aa80ca34faeef} 
+void read\+Click (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{x}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{y}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00087}{87}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ 콘솔\ 입력\ 모드\ 설정}}
+\DoxyCodeLine{00089\ \ \ \ \ DWORD\ prev\_mode;}
+\DoxyCodeLine{00090\ \ \ \ \ GetConsoleMode(\mbox{\hyperlink{player_u_i_8cpp_a04a540185a8eba76b477fa17d65e8541}{inputHandle}},\ \&prev\_mode);}
+\DoxyCodeLine{00091\ \ \ \ \ SetConsoleMode(\mbox{\hyperlink{player_u_i_8cpp_a04a540185a8eba76b477fa17d65e8541}{inputHandle}},\ ENABLE\_EXTENDED\_FLAGS\ |\ ENABLE\_MOUSE\_INPUT\ |\ ENABLE\_PROCESSED\_INPUT);}
+\DoxyCodeLine{00092\ \ \ \ \ INPUT\_RECORD\ rec;}
+\DoxyCodeLine{00093\ \ \ \ \ DWORD\ eventWritten;}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ ReadConsoleInput(\mbox{\hyperlink{player_u_i_8cpp_a04a540185a8eba76b477fa17d65e8541}{inputHandle}},\ \&rec,\ 1,\ \&eventWritten);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rec.EventType\ ==\ MOUSE\_EVENT)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rec.Event.MouseEvent.dwButtonState\ \&\ FROM\_LEFT\_1ST\_BUTTON\_PRESSED)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *x\ =\ rec.Event.MouseEvent.dwMousePosition.X;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *y\ =\ rec.Event.MouseEvent.dwMousePosition.Y;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ 이전\ 콘솔\ 모드\ 복원}}
+\DoxyCodeLine{00107\ \ \ \ \ SetConsoleMode(\mbox{\hyperlink{player_u_i_8cpp_a04a540185a8eba76b477fa17d65e8541}{inputHandle}},\ prev\_mode);}
+\DoxyCodeLine{00108\ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\Hypertarget{player_u_i_8cpp_a0ed0f34fce6fb0d1c106dc480f61790a}\index{playerUI.cpp@{playerUI.cpp}!UpdateUI@{UpdateUI}}
+\index{UpdateUI@{UpdateUI}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateUI()}{UpdateUI()}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_a0ed0f34fce6fb0d1c106dc480f61790a} 
+void Update\+UI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2}{Update\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00110}{110}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}\ progressBar[32]\ =\ L\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ barWidth\ =\ 30;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ length\ =\ \mbox{\hyperlink{music_player_8cpp_a133ffa0437a422ffdb948b05f9310f1d}{GetStatus}}(MCI\_STATUS\_LENGTH);}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ position\ =\ \mbox{\hyperlink{music_player_8cpp_a133ffa0437a422ffdb948b05f9310f1d}{GetStatus}}(MCI\_STATUS\_POSITION);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ (((double)position\ /\ length)\ *\ barWidth);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}*\ currentTime\ =\ \mbox{\hyperlink{player_u_i_8cpp_a48b1492fdf363f1f37b5ffc848675333}{MsToTime}}(position);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}*\ totalTime\ =\ \mbox{\hyperlink{player_u_i_8cpp_a48b1492fdf363f1f37b5ffc848675333}{MsToTime}}(length);}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}*\ title\ =\ wcsrchr(\mbox{\hyperlink{dynamic_array_8cpp_a5921838065e1c0e27a510ea32a5941db}{getStringArrayValue}}(\&\mbox{\hyperlink{music_player_8cpp_a6a21669261f0832b477f6c237eebe18b}{player}}.\mbox{\hyperlink{struct_player_data_a4a076522905a02d538180355f5514970}{pathArray}},\mbox{\hyperlink{music_player_8cpp_a6a21669261f0832b477f6c237eebe18b}{player}}.\mbox{\hyperlink{struct_player_data_a1a6c85845de1239b95084f75b6b30b92}{playIndex}}),\ L\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})\ +1;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ barWidth;\ i++)\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ pos)\ \ \ \ \ \ \ \ \ wcscat(progressBar,\ L\textcolor{stringliteral}{"{}━"{}});}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ ==\ pos)\ wcscat(progressBar,\ L\textcolor{stringliteral}{"{}●"{}});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wcscat(progressBar,\ L\textcolor{stringliteral}{"{}━"{}});}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ SetConsoleTitleW(title);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a4b9cbb1973cac4ff0f9293456aaea7f5}{UpdateClear}}:}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a409471bd6e26238b55939ea334bf2478}{clearLine}}(i);}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a0c3781db7c57eccc3e9a36fd1e3be417}{UpdateAll}}:}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a409471bd6e26238b55939ea334bf2478}{clearLine}}(2);\ \mbox{\hyperlink{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1}{uprintf}}(2,L\textcolor{stringliteral}{"{}\%43ls"{}},\ title);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a409471bd6e26238b55939ea334bf2478}{clearLine}}(3);\ \mbox{\hyperlink{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1}{uprintf}}(3,L\textcolor{stringliteral}{"{}\%20ls\ \%ls\ \%ls"{}},\ currentTime,\ progressBar,\ totalTime);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a409471bd6e26238b55939ea334bf2478}{clearLine}}(4);\ \mbox{\hyperlink{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1}{uprintf}}(4,L\textcolor{stringliteral}{"{}\%25ls\ \%5ls\ \%5ls\ \%5ls\ \%ls"{}},\ L\textcolor{stringliteral}{"{}⇆"{}},\ L\textcolor{stringliteral}{"{}❚◁"{}},\ (\mbox{\hyperlink{music_player_8cpp_a6a21669261f0832b477f6c237eebe18b}{player}}.\mbox{\hyperlink{struct_player_data_a5eea2f301ef30fc99819981f513b862e}{paused}}\ ?\ L\textcolor{stringliteral}{"{}\ ▶"{}}\ :\ L\textcolor{stringliteral}{"{}\ ||"{}}),\ L\textcolor{stringliteral}{"{}▷❚"{}},\ L\textcolor{stringliteral}{"{}↻"{}});}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a22fef927f371e78d0907d893404c09da}{UpdateTime}}:}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1}{uprintf}}(3,L\textcolor{stringliteral}{"{}\%20ls\ \%ls\ \%ls"{}},\ currentTime,\ progressBar,\ totalTime);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{player_u_i_8cpp_a0957e0df001dd796895b75f947daddb2a6eec3850dd6c622acb6b5cbd870fe31e}{UpdateStatus}}:}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1}{uprintf}}(4,L\textcolor{stringliteral}{"{}\%25ls\ \%5ls\ \%5ls\ \%5ls\ \%ls"{}},\ L\textcolor{stringliteral}{"{}⇆"{}},\ L\textcolor{stringliteral}{"{}❚◁"{}},\ (\mbox{\hyperlink{music_player_8cpp_a6a21669261f0832b477f6c237eebe18b}{player}}.\mbox{\hyperlink{struct_player_data_a5eea2f301ef30fc99819981f513b862e}{paused}}\ ?\ L\textcolor{stringliteral}{"{}\ ▶"{}}\ :\ L\textcolor{stringliteral}{"{}||"{}}),\ L\textcolor{stringliteral}{"{}▷❚"{}},\ L\textcolor{stringliteral}{"{}↻"{}});}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ }
+\DoxyCodeLine{00148\ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+\Hypertarget{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1}\index{playerUI.cpp@{playerUI.cpp}!uprintf@{uprintf}}
+\index{uprintf@{uprintf}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{uprintf()}{uprintf()}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_a9d1008cd1f195593b51aa49bd912dac1} 
+void uprintf (\begin{DoxyParamCaption}\item[{int}]{line}{, }\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00041}{41}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{wchar\_t}\ buffer[240];}
+\DoxyCodeLine{00043\ \ \ \ \ DWORD\ dwBytesWritten;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ va\_list\ args;}
+\DoxyCodeLine{00046\ \ \ \ \ va\_start(args,\ str);\ \ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ vswprintf(buffer,\ 240,\ str,\ args);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{player_u_i_8cpp_ae824443b3f661414ba1f2718e17fe97d}{gotoxy}}(0,\ line);}
+\DoxyCodeLine{00050\ \ \ \ \ WriteConsoleOutputCharacterW(\mbox{\hyperlink{player_u_i_8cpp_af5fbc6739e38812f81e08dd0812579f5}{outputHandle}},\ buffer,\ wcslen(buffer),\ \mbox{\hyperlink{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462}{coord}},\ \&dwBytesWritten);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ va\_end(args);}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 9
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 10
+
+
+\doxysubsection{변수 문서화}
+\Hypertarget{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462}\index{playerUI.cpp@{playerUI.cpp}!coord@{coord}}
+\index{coord@{coord}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{coord}{coord}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_afd9018d32867a27a7ce20ae665e80462} 
+COORD coord = \{ 0, 0 \}}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ 0,\ 0\ \};}
+
+\end{DoxyCode}
+\Hypertarget{player_u_i_8cpp_a04a540185a8eba76b477fa17d65e8541}\index{playerUI.cpp@{playerUI.cpp}!inputHandle@{inputHandle}}
+\index{inputHandle@{inputHandle}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{inputHandle}{inputHandle}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_a04a540185a8eba76b477fa17d65e8541} 
+HANDLE input\+Handle = Get\+Std\+Handle(STD\+\_\+\+INPUT\+\_\+\+HANDLE)}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00017}{17}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{player_u_i_8cpp_af5fbc6739e38812f81e08dd0812579f5}\index{playerUI.cpp@{playerUI.cpp}!outputHandle@{outputHandle}}
+\index{outputHandle@{outputHandle}!playerUI.cpp@{playerUI.cpp}}
+\doxysubsubsection{\texorpdfstring{outputHandle}{outputHandle}}
+{\footnotesize\ttfamily \label{player_u_i_8cpp_af5fbc6739e38812f81e08dd0812579f5} 
+HANDLE output\+Handle = Get\+Std\+Handle(STD\+\_\+\+OUTPUT\+\_\+\+HANDLE)}
+
+
+
+\mbox{\hyperlink{player_u_i_8cpp_source}{player\+UI.\+cpp}} 파일의 \mbox{\hyperlink{player_u_i_8cpp_source_l00016}{16}} 번째 라인에서 정의되었습니다.
+

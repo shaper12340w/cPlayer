@@ -30,6 +30,9 @@
     <ClCompile Include="playerUI.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="manageConsole.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="musicPlayer.h">
@@ -42,6 +45,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="playerUI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="manageConsole.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

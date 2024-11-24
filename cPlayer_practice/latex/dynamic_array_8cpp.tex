@@ -1,0 +1,631 @@
+\doxysection{dynamic\+Array.\+cpp íŒŒì¼ ì°¸ì¡°}
+\hypertarget{dynamic_array_8cpp}{}\label{dynamic_array_8cpp}\index{dynamicArray.cpp@{dynamicArray.cpp}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+dynamic\+Array.\+cppì— ëŒ€í•œ include ì˜ì¡´ ê·¸ë˜í”„
+% FIG 0
+\doxysubsubsection*{í´ë˜ìŠ¤}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_int_array}{Int\+Array}}
+\item 
+struct \mbox{\hyperlink{struct_string_array}{String\+Array}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{ì—´ê±°í˜• íƒ€ì…}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9}{Array\+Type}} \{ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}{ARRAY\+\_\+\+TYPE\+\_\+\+INT}}
+, \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a43fe8ceee2b5443ff5369c5765cf2c2b}{ARRAY\+\_\+\+TYPE\+\_\+\+WSTRING}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{í•¨ìˆ˜}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_ae6c02625a31964826743600621108091}{init\+Int\+Array}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr, int cap)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_ab8ada7b52de414fed0fabc6a7e482d06}{init\+String\+Array}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr, int cap, int size)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_ad3b6b1d292f83c58971cbb186718adb5}{resize\+Int\+Array}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_ae7430bc846e2bd26dee7a398d4c61d3f}{resize\+String\+Array}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_a6804c56ddc86e6793cc846afa5fcfad9}{add\+Int\+Array\+Value}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr, int val)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_aeeb7693e1628d77d5d8426f38a4775fa}{add\+String\+Array\+Value}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr, const wchar\+\_\+t \texorpdfstring{$\ast$}{*}str)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_ac05014112c6c3828b28e0a5c5d6178e1}{change\+Int\+Array\+Value}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr, int val, int index)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_a460358c1f34126bfef852ea6d7991d09}{change\+String\+Array\+Value}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr, const wchar\+\_\+t \texorpdfstring{$\ast$}{*}str, int index)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_a3c3d6bf3dfbbeb119fbed50eab4b18a5}{remove\+Int\+Array\+Value}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr, int index)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_a4eda59eb24899ce5ecea937d011a22ea}{remove\+String\+Array\+Value}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr, int index)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_a8614ae132d46c64329acb098f66e2687}{remove\+Int\+Array}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_a60ae06601a9715123cf58b75b472eb63}{remove\+String\+Array}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr)
+\item 
+int \mbox{\hyperlink{dynamic_array_8cpp_a72f77dc17158db19cf48394ee69d34e7}{get\+Int\+Array\+Length}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr)
+\item 
+int \mbox{\hyperlink{dynamic_array_8cpp_adacf9282530b68191d5d02d1d9756014}{get\+String\+Array\+Length}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr)
+\item 
+int \mbox{\hyperlink{dynamic_array_8cpp_a6f47afb1a948826955d8952fb8d8f48c}{check\+Int\+Array\+Value}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr, int value)
+\item 
+int \mbox{\hyperlink{dynamic_array_8cpp_ac390e526637a2bd9ff40440265317aa0}{check\+String\+Array\+Value}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr, const wchar\+\_\+t \texorpdfstring{$\ast$}{*}value)
+\item 
+int \mbox{\hyperlink{dynamic_array_8cpp_af1342933a39b755287cd8a7d017ce715}{get\+Int\+Array\+Value}} (\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}arr, int index)
+\item 
+wchar\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dynamic_array_8cpp_a5921838065e1c0e27a510ea32a5941db}{get\+String\+Array\+Value}} (\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}arr, int index)
+\item 
+void \mbox{\hyperlink{dynamic_array_8cpp_a235505f332e4b8932db9dc2929fa4292}{debug\+Array}} (const void \texorpdfstring{$\ast$}{*}array\+Struct, \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9}{Array\+Type}} type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{ì—´ê±°í˜• íƒ€ì… ë¬¸ì„œí™”}
+\Hypertarget{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9}\index{dynamicArray.cpp@{dynamicArray.cpp}!ArrayType@{ArrayType}}
+\index{ArrayType@{ArrayType}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{ArrayType}{ArrayType}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9} 
+enum \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9}{Array\+Type}}}
+
+\begin{DoxyEnumFields}[2]{ì—´ê±°í˜• ë©¤ë²„}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARRAY\_TYPE\_INT@{ARRAY\_TYPE\_INT}!dynamicArray.cpp@{dynamicArray.cpp}}\index{dynamicArray.cpp@{dynamicArray.cpp}!ARRAY\_TYPE\_INT@{ARRAY\_TYPE\_INT}}}\Hypertarget{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}\label{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9} 
+ARRAY\+\_\+\+TYPE\+\_\+\+INT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARRAY\_TYPE\_WSTRING@{ARRAY\_TYPE\_WSTRING}!dynamicArray.cpp@{dynamicArray.cpp}}\index{dynamicArray.cpp@{dynamicArray.cpp}!ARRAY\_TYPE\_WSTRING@{ARRAY\_TYPE\_WSTRING}}}\Hypertarget{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a43fe8ceee2b5443ff5369c5765cf2c2b}\label{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9} 
+ARRAY\+\_\+\+TYPE\+\_\+\+WSTRING&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00172}{172}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}{ARRAY\_TYPE\_INT}},}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a43fe8ceee2b5443ff5369c5765cf2c2b}{ARRAY\_TYPE\_WSTRING}}}
+\DoxyCodeLine{00175\ \}\ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9}{ArrayType}};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{í•¨ìˆ˜ ë¬¸ì„œí™”}
+\Hypertarget{dynamic_array_8cpp_a6804c56ddc86e6793cc846afa5fcfad9}\index{dynamicArray.cpp@{dynamicArray.cpp}!addIntArrayValue@{addIntArrayValue}}
+\index{addIntArrayValue@{addIntArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{addIntArrayValue()}{addIntArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a6804c56ddc86e6793cc846afa5fcfad9} 
+void add\+Int\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{val}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00057}{57}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}}\ >=\ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}})}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{dynamic_array_8cpp_ad3b6b1d292f83c58971cbb186718adb5}{resizeIntArray}}(arr);}
+\DoxyCodeLine{00060\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}[arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}}]\ =\ val;}
+\DoxyCodeLine{00061\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}}++;}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ ë‚´ë¶€ì—ì„œ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 1
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 2
+\Hypertarget{dynamic_array_8cpp_aeeb7693e1628d77d5d8426f38a4775fa}\index{dynamicArray.cpp@{dynamicArray.cpp}!addStringArrayValue@{addStringArrayValue}}
+\index{addStringArrayValue@{addStringArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{addStringArrayValue()}{addStringArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_aeeb7693e1628d77d5d8426f38a4775fa} 
+void add\+String\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00064}{64}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}\ >=\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}})}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{dynamic_array_8cpp_ae7430bc846e2bd26dee7a398d4c61d3f}{resizeStringArray}}(arr);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}]\ !=\ NULL\ \&\&\ wcslen(str)\ <\ arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}})\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ wcscpy\_s(arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}],\ arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}},\ str);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}++;}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Invalid\ operation:\ buffer\ too\ small\ or\ memory\ allocation\ failed.\(\backslash\)n"{}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ ë‚´ë¶€ì—ì„œ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 3
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 4
+\Hypertarget{dynamic_array_8cpp_ac05014112c6c3828b28e0a5c5d6178e1}\index{dynamicArray.cpp@{dynamicArray.cpp}!changeIntArrayValue@{changeIntArrayValue}}
+\index{changeIntArrayValue@{changeIntArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{changeIntArrayValue()}{changeIntArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_ac05014112c6c3828b28e0a5c5d6178e1} 
+void change\+Int\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{val}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00078}{78}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}})\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Wrong\ Value!\(\backslash\)n"{}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}[index]\ =\ val;}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}
+\Hypertarget{dynamic_array_8cpp_a460358c1f34126bfef852ea6d7991d09}\index{dynamicArray.cpp@{dynamicArray.cpp}!changeStringArrayValue@{changeStringArrayValue}}
+\index{changeStringArrayValue@{changeStringArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{changeStringArrayValue()}{changeStringArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a460358c1f34126bfef852ea6d7991d09} 
+void change\+String\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00086}{86}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}})\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Wrong\ Value!\(\backslash\)n"{}});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ wcscpy\_s(arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[index],\ arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}},\ str);}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 5
+\Hypertarget{dynamic_array_8cpp_a6f47afb1a948826955d8952fb8d8f48c}\index{dynamicArray.cpp@{dynamicArray.cpp}!checkIntArrayValue@{checkIntArrayValue}}
+\index{checkIntArrayValue@{checkIntArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{checkIntArrayValue()}{checkIntArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a6f47afb1a948826955d8952fb8d8f48c} 
+int check\+Int\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00138}{138}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}};\ i++)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}[i]\ ==\ value)\ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{00141\ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00143\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 6
+\Hypertarget{dynamic_array_8cpp_ac390e526637a2bd9ff40440265317aa0}\index{dynamicArray.cpp@{dynamicArray.cpp}!checkStringArrayValue@{checkStringArrayValue}}
+\index{checkStringArrayValue@{checkStringArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{checkStringArrayValue()}{checkStringArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_ac390e526637a2bd9ff40440265317aa0} 
+int check\+String\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00145}{145}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}};\ i++)\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (wcscmp(arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i],value))\ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00150\ \}}
+
+\end{DoxyCode}
+\Hypertarget{dynamic_array_8cpp_a235505f332e4b8932db9dc2929fa4292}\index{dynamicArray.cpp@{dynamicArray.cpp}!debugArray@{debugArray}}
+\index{debugArray@{debugArray}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{debugArray()}{debugArray()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a235505f332e4b8932db9dc2929fa4292} 
+void debug\+Array (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{array\+Struct}{, }\item[{\mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9}{Array\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00178}{178}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \_wsetlocale(LC\_ALL,\ L\textcolor{stringliteral}{"{}ko\_KR.utf8"{}});}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}\(\backslash\)n===\ Array\ Inspection\ ===\(\backslash\)n"{}});}
+\DoxyCodeLine{00182\ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤\(\backslash\)n"{}});}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{if}\ (arrayStruct\ ==\ NULL)\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ [WARNING]\ Null\ struct\ pointer\(\backslash\)n"{}});}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥\(\backslash\)n"{}});}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ totalMemory\ =\ 0;}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}{ARRAY\_TYPE\_INT}})\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_int_array}{IntArray}}*\ arr\ =\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_int_array}{IntArray}}*)arrayStruct;}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ±âº»\ Á¤º¸\ Ãâ·Â}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Capacity:\ \%zu\(\backslash\)n"{}},\ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}});}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Current\ Value:\ \%d\(\backslash\)n"{}},\ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}});}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ¸Ş¸ğ¸® °è»ê}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ totalMemory\ =\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_int_array}{IntArray}})\ +\ (\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})\ *\ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}});}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Memory\ Usage:\(\backslash\)n"{}});}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ -\/\ Structure:\ \%zu\ bytes\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_int_array}{IntArray}}));}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ -\/\ Array\ Memory:\ \%zu\ bytes\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})\ *\ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}});}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ¹è¿­\ ³»¿ë Ãâ·Â}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦§¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦©\(\backslash\)n"{}});}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Array\ Contents:\(\backslash\)n"{}});}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ [WARNING]\ Array\ is\ NULL\(\backslash\)n"{}});}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}};\ i++)\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ arr-\/>currentValue)\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ [\%2zu]\ Value:\ \%d\(\backslash\)n"{}},\ i,\ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}[i]);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ [\%2zu]\ Unused\ slot\(\backslash\)n"{}},\ i);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \textcolor{comment}{//\ ARRAY\_TYPE\_WSTRING}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_string_array}{StringArray}}*\ arr\ =\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_string_array}{StringArray}}*)arrayStruct;}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ±âº»\ Á¤º¸\ Ãâ·Â}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Capacity:\ \%zu\(\backslash\)n"{}},\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}});}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Current\ Value:\ \%d\(\backslash\)n"{}},\ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}});}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Word\ Size:\ \%zu\(\backslash\)n"{}},\ arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}});}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ¸Ş¸ğ¸® °è»ê}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ totalMemory\ =\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_string_array}{StringArray}})\ +\ (\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}*)\ *\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}});}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Memory\ Usage:\(\backslash\)n"{}});}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ -\/\ Structure:\ \%zu\ bytes\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_string_array}{StringArray}}));}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ -\/\ Pointer\ Array:\ \%zu\ bytes\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}*)\ *\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}});}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ¹è¿­\ ³»¿ë Ãâ·Â}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦§¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦©\(\backslash\)n"{}});}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Array\ Contents:\(\backslash\)n"{}});}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ [WARNING]\ Array\ is\ NULL\(\backslash\)n"{}});}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}};\ i++)\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ arr-\/>currentValue)\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ strLen\ =\ wcslen(arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalMemory\ +=\ (strLen\ +\ 1)\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t});}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ [\%2zu]\ (\%3zu\ chars):\ \(\backslash\)"{}\%ls\(\backslash\)"{}\(\backslash\)n"{}},}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i,\ strLen,\ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]);}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ [\%2zu]\ NULL\ POINTER\(\backslash\)n"{}},\ i);}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ \ \ [\%2zu]\ Unused\ slot\(\backslash\)n"{}},\ i);}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{comment}{//\ ¸Ş¸ğ¸® »ç¿ë·®\ ¹× »ç¿ë·ü Ãâ·Â}}
+\DoxyCodeLine{00267\ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦§¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦©\(\backslash\)n"{}});}
+\DoxyCodeLine{00268\ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Total\ Memory\ Usage:\ \%zu\ bytes\(\backslash\)n"{}},\ totalMemory);}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ currentValue\ =\ (type\ ==\ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}{ARRAY\_TYPE\_INT}})}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ ?\ ((\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_int_array}{IntArray}}*)arrayStruct)-\/>currentValue}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ :\ ((\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_string_array}{StringArray}}*)arrayStruct)-\/>currentValue;}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ capacity\ =\ (type\ ==\ \mbox{\hyperlink{dynamic_array_8cpp_a6a03cb2a3ac6197231b65056e6b01ee9a9dd5bc5669c04973f07e3e5ea30e07d7}{ARRAY\_TYPE\_INT}})}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ ?\ ((\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_int_array}{IntArray}}*)arrayStruct)-\/>capacity}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ :\ ((\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_string_array}{StringArray}}*)arrayStruct)-\/>capacity;}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{double}\ utilizationRate\ =\ (currentValue\ *\ 100.0)\ /\ capacity;}
+\DoxyCodeLine{00278\ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¢\ Array\ Utilization:\ \%.1f\%\%\(\backslash\)n"{}},\ utilizationRate);}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ wprintf(L\textcolor{stringliteral}{"{}¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00281\ \}}
+
+\end{DoxyCode}
+\Hypertarget{dynamic_array_8cpp_a72f77dc17158db19cf48394ee69d34e7}\index{dynamicArray.cpp@{dynamicArray.cpp}!getIntArrayLength@{getIntArrayLength}}
+\index{getIntArrayLength@{getIntArrayLength}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{getIntArrayLength()}{getIntArrayLength()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a72f77dc17158db19cf48394ee69d34e7} 
+int get\+Int\+Array\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00130}{130}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{return}\ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}};}
+\DoxyCodeLine{00132\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 7
+\Hypertarget{dynamic_array_8cpp_af1342933a39b755287cd8a7d017ce715}\index{dynamicArray.cpp@{dynamicArray.cpp}!getIntArrayValue@{getIntArrayValue}}
+\index{getIntArrayValue@{getIntArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{getIntArrayValue()}{getIntArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_af1342933a39b755287cd8a7d017ce715} 
+int get\+Int\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00153}{153}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}})\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ Invalid\ index\ (\%d).\ Current\ size:\ \%d\(\backslash\)n"{}},\ index,\ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00157\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{return}\ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}[index];}
+\DoxyCodeLine{00159\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 8
+\Hypertarget{dynamic_array_8cpp_adacf9282530b68191d5d02d1d9756014}\index{dynamicArray.cpp@{dynamicArray.cpp}!getStringArrayLength@{getStringArrayLength}}
+\index{getStringArrayLength@{getStringArrayLength}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{getStringArrayLength()}{getStringArrayLength()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_adacf9282530b68191d5d02d1d9756014} 
+int get\+String\+Array\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00134}{134}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{return}\ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}};}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 9
+\Hypertarget{dynamic_array_8cpp_a5921838065e1c0e27a510ea32a5941db}\index{dynamicArray.cpp@{dynamicArray.cpp}!getStringArrayValue@{getStringArrayValue}}
+\index{getStringArrayValue@{getStringArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{getStringArrayValue()}{getStringArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a5921838065e1c0e27a510ea32a5941db} 
+wchar\+\_\+t \texorpdfstring{$\ast$}{*} get\+String\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00161}{161}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}})\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ Invalid\ index\ (\%d).\ Current\ size:\ \%d\(\backslash\)n"{}},\ index,\ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}});}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{return}\ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[index];}
+\DoxyCodeLine{00167\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 10
+\Hypertarget{dynamic_array_8cpp_ae6c02625a31964826743600621108091}\index{dynamicArray.cpp@{dynamicArray.cpp}!initIntArray@{initIntArray}}
+\index{initIntArray@{initIntArray}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{initIntArray()}{initIntArray()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_ae6c02625a31964826743600621108091} 
+void init\+Int\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{cap}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00019}{19}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}}\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}}\ =\ (size\_t)cap;}
+\DoxyCodeLine{00022\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}\ =\ (\textcolor{keywordtype}{int}*)malloc(arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 11
+\Hypertarget{dynamic_array_8cpp_ab8ada7b52de414fed0fabc6a7e482d06}\index{dynamicArray.cpp@{dynamicArray.cpp}!initStringArray@{initStringArray}}
+\index{initStringArray@{initStringArray}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{initStringArray()}{initStringArray()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_ab8ada7b52de414fed0fabc6a7e482d06} 
+void init\+String\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{cap}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00025}{25}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}}\ =\ (size\_t)cap;}
+\DoxyCodeLine{00028\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}}\ =\ (size\_t)size;}
+\DoxyCodeLine{00029\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}\ =\ (\textcolor{keywordtype}{wchar\_t}**)malloc(arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}*));}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;i\ <\ cap;i++)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]\ =\ (\textcolor{keywordtype}{wchar\_t}*)malloc(arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}));}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 12
+\Hypertarget{dynamic_array_8cpp_a8614ae132d46c64329acb098f66e2687}\index{dynamicArray.cpp@{dynamicArray.cpp}!removeIntArray@{removeIntArray}}
+\index{removeIntArray@{removeIntArray}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{removeIntArray()}{removeIntArray()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a8614ae132d46c64329acb098f66e2687} 
+void remove\+Int\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00120}{120}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ free(arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}});}
+\DoxyCodeLine{00122\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 13
+\Hypertarget{dynamic_array_8cpp_a3c3d6bf3dfbbeb119fbed50eab4b18a5}\index{dynamicArray.cpp@{dynamicArray.cpp}!removeIntArrayValue@{removeIntArrayValue}}
+\index{removeIntArrayValue@{removeIntArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{removeIntArrayValue()}{removeIntArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a3c3d6bf3dfbbeb119fbed50eab4b18a5} 
+void remove\+Int\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00095}{95}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}})\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Wrong\ Value!\(\backslash\)n"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ index;\ i\ <\ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}}\ -\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}[i]\ =\ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}[i\ +\ 1];}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_abf35aba7e3932b4a4c34c8a05a34909f}{currentValue}}-\/-\/;}
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 14
+\Hypertarget{dynamic_array_8cpp_a60ae06601a9715123cf58b75b472eb63}\index{dynamicArray.cpp@{dynamicArray.cpp}!removeStringArray@{removeStringArray}}
+\index{removeStringArray@{removeStringArray}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{removeStringArray()}{removeStringArray()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a60ae06601a9715123cf58b75b472eb63} 
+void remove\+String\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00124}{124}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;i\ <\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}};i++)}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ free(arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]);}
+\DoxyCodeLine{00127\ \ \ \ \ free(arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}});}
+\DoxyCodeLine{00128\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 15
+\Hypertarget{dynamic_array_8cpp_a4eda59eb24899ce5ecea937d011a22ea}\index{dynamicArray.cpp@{dynamicArray.cpp}!removeStringArrayValue@{removeStringArrayValue}}
+\index{removeStringArrayValue@{removeStringArrayValue}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{removeStringArrayValue()}{removeStringArrayValue()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_a4eda59eb24899ce5ecea937d011a22ea} 
+void remove\+String\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00107}{107}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}})\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Wrong\ Value!\(\backslash\)n"{}});}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ index;\ i\ <\ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}\ -\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]\ =\ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i\ +\ 1];}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}\ -\/\ 1]\ =\ (\textcolor{keywordtype}{wchar\_t}*)malloc(arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}));}
+\DoxyCodeLine{00117\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_a46d4f921c61e156dbce04248ab08a061}{currentValue}}-\/-\/;}
+\DoxyCodeLine{00118\ \}}
+
+\end{DoxyCode}
+\Hypertarget{dynamic_array_8cpp_ad3b6b1d292f83c58971cbb186718adb5}\index{dynamicArray.cpp@{dynamicArray.cpp}!resizeIntArray@{resizeIntArray}}
+\index{resizeIntArray@{resizeIntArray}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{resizeIntArray()}{resizeIntArray()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_ad3b6b1d292f83c58971cbb186718adb5} 
+void resize\+Int\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_int_array}{Int\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00034}{34}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}}\ *=\ 2;}
+\DoxyCodeLine{00036\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}}\ =\ (\textcolor{keywordtype}{int}*)realloc(arr-\/>\mbox{\hyperlink{struct_int_array_ae07032deeb7f39d8f49ec630cefa794a}{array}},\ arr-\/>\mbox{\hyperlink{struct_int_array_a9db6267c8fa517479d2d247fe8597758}{capacity}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 16
+\Hypertarget{dynamic_array_8cpp_ae7430bc846e2bd26dee7a398d4c61d3f}\index{dynamicArray.cpp@{dynamicArray.cpp}!resizeStringArray@{resizeStringArray}}
+\index{resizeStringArray@{resizeStringArray}!dynamicArray.cpp@{dynamicArray.cpp}}
+\doxysubsubsection{\texorpdfstring{resizeStringArray()}{resizeStringArray()}}
+{\footnotesize\ttfamily \label{dynamic_array_8cpp_ae7430bc846e2bd26dee7a398d4c61d3f} 
+void resize\+String\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_string_array}{String\+Array}} \texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{dynamic_array_8cpp_source}{dynamic\+Array.\+cpp}} íŒŒì¼ì˜ \mbox{\hyperlink{dynamic_array_8cpp_source_l00039}{39}} ë²ˆì§¸ ë¼ì¸ì—ì„œ ì •ì˜ë˜ì—ˆìŠµë‹ˆë‹¤.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ oldCapacity\ =\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}};}
+\DoxyCodeLine{00041\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}}\ *=\ 2;}
+\DoxyCodeLine{00042\ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}\ =\ (\textcolor{keywordtype}{wchar\_t}**)realloc(arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}},\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}*));}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ Memory\ reallocation\ failed.\(\backslash\)n"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ oldCapacity;\ i\ <\ arr-\/>\mbox{\hyperlink{struct_string_array_a90cd524cc1ef3d8334dea36616e2f8dd}{capacity}};\ i++)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]\ =\ (\textcolor{keywordtype}{wchar\_t}*)malloc(arr-\/>\mbox{\hyperlink{struct_string_array_a53ce6ce31b3b880f3ea43b4361212f8c}{wordSize}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}));}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr-\/>\mbox{\hyperlink{struct_string_array_ac4bac75893a6da881820306375723e2e}{array}}[i]\ ==\ NULL)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ Memory\ allocation\ failed\ for\ new\ slot\ \%zu.\(\backslash\)n"{}},\ i);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ë“¤ì— ëŒ€í•œ ê·¸ë˜í”„ì…ë‹ˆë‹¤.\+:
+% FIG 17
