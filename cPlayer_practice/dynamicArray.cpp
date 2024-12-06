@@ -1,8 +1,8 @@
 // 필요한 헤더 파일 포함
-#include <string.h>
-#include <stdio.h>
-#include <locale.h>
-#include <stdlib.h>
+#include <string.h> // 문자열 처리 함수 사용을 위한 헤더 파일 포함
+#include <stdio.h>// 표준 입출력 함수 사용을 위한 헤더 파일 포함
+#include <locale.h> // 로케일 설정을 위한 헤더 파일
+#include <stdlib.h>// 표준 라이브러리 함수 사용을 위한 헤더 파일 포함
 
 // 정수 배열 구조체 정의
 typedef struct {
@@ -10,6 +10,12 @@ typedef struct {
 	size_t capacity; // 배열의 용량
 	int* array; // 정수 배열 포인터
 } IntArray;
+
+/*
+* C언어에는 다른 고급 언어와 별개로 따로 동적으로 배열을 관리하는 함수가 없습니다.
+* 이를 극복하기 위해 주로 사용하는 배열 형식인 Int형 배열과 wchar_t ( 유니코드 스트링 ) 배열을
+* 사용하기 위해 각 초기화, 배열 크기 조절, 추가, 삭제, 바꾸기, 배열 삭제, 배열 크기 등의 함수를 직접 구현했습니다.
+*/
 
 // 문자열 배열 구조체 정의
 typedef struct  {

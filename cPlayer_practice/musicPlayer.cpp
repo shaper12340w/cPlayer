@@ -11,6 +11,7 @@
 #pragma comment (lib, "winmm.lib") // winmm 라이브러리 링크
 
 // MCI (Media Control Interface) 관련 파라미터 구조체 정의
+// MCI 관련 문서 참고 : https://learn.microsoft.com/ko-kr/windows/win32/multimedia/mci
 typedef struct {
     MCI_OPEN_PARMSW openParam; // MCI 열기 파라미터
     MCI_PLAY_PARMS playParam; // MCI 재생 파라미터
@@ -34,9 +35,47 @@ typedef struct {
 MCI_PARAM param; // MCI 파라미터 변수
 PlayerData player; // 플레이어 데이터 변수
 
-void Ready(); // 준비 함수 선언
-void Play(); // 재생 함수 선언
-void ResetParam(); // 파라미터 초기화 함수 선언
+// MCI 명령 실행 함수 선언
+void ExecuteMCI(MCIDEVICEID id, UINT msg, DWORD_PTR command, DWORD_PTR param);
+
+// 플레이어 초기화 함수 선언
+void InitPlayer();
+
+// 상태 가져오기 함수 선언
+int GetStatus(DWORD dwStatus);
+
+// 곡 추가 함수 선언
+void Add(const wchar_t* path);
+
+// 준비 함수 선언
+void Ready();
+
+// 재생 함수 선언
+void Play();
+
+// 일시 정지 함수 선언
+void Pause();
+
+// 다음 곡 재생 함수 선언
+void Next();
+
+// 이전 곡 재생 함수 선언
+void Prev();
+
+// 특정 인덱스의 곡 재생 함수 선언
+void PlayIndex(int index);
+
+// 셔플 재생 함수 선언
+void Shuffle();
+
+// 반복 재생 함수 선언
+void Repeat();
+
+// 특정 시간으로 이동 함수 선언
+void MoveTo(int time);
+
+// 플레이어 상태 확인 함수 선언
+int CheckPlayer();
 
 // MCI 명령 실행 함수
 void ExecuteMCI(MCIDEVICEID id, UINT msg, DWORD_PTR command, DWORD_PTR param) {
@@ -45,26 +84,36 @@ void ExecuteMCI(MCIDEVICEID id, UINT msg, DWORD_PTR command, DWORD_PTR param) {
         WCHAR reason[256]; // 오류 메시지 저장 버퍼
         mciGetErrorStringW(result, reason, 256); // 오류 메시지 가져오기
         switch (msg) { // 명령 종류에 따라 오류 메시지 출력
-        case MCI_OPEN:
-            if (result == MCIERR_INTERNAL) {
-                wchar_t tempPath[MAX_PATH] = L"";
-                SaveTemporaryMP3(getStringArrayValue(&player.pathArray, player.playIndex), tempPath, MAX_PATH);
-                changeStringArrayValue(&player.pathArray, tempPath, player.playIndex);
-                addIntArrayValue(&player.deletedArray, player.playIndex);
-                uprintf(6, L"Warning : MP3 tag error\nPlay with temp File..");
-                Ready();
-                return;
+        case MCI_OPEN: // MCI_OPEN 명령일 때
+            if (result == MCIERR_INTERNAL) { // 내부 오류 발생 시
+                wchar_t tempPath[MAX_PATH] = L""; // 임시 파일 경로 버퍼
+                SaveTemporaryMP3(getStringArrayValue(&player.pathArray, player.playIndex), tempPath, MAX_PATH); // 임시 MP3 파일 저장
+                changeStringArrayValue(&player.pathArray, tempPath, player.playIndex); // 경로 배열의 값을 임시 파일 경로로 변경
+                addIntArrayValue(&player.deletedArray, player.playIndex); // 삭제된 항목 배열에 현재 인덱스 추가
+                uprintf(6, L"Warning : MP3 tag error\nPlay with temp File.."); // 경고 메시지 출력
+                Ready(); // 준비 함수 호출
+                return; // 함수 종료
             }
-            else
-                uprintf(6, L"Error Opening Music : \n%ls\nCode : %d", reason, result);
+            else // 다른 오류 발생 시
+                uprintf(6, L"Error Opening Music : \n%ls\nCode : %d", reason, result); // 오류 메시지 출력
             break;
-        case MCI_PLAY:  uprintf(6, L"Error Playing Music : \n%ls\nCode : %d", reason, result); break;
-        case MCI_PAUSE: uprintf(6, L"Error Pausing Music : \n%ls\nCode : %d", reason, result); break;
-        case MCI_STATUS: uprintf(6, L"Error Getting Information of Music : \n%ls\nCode : %d", reason, result); break;
-        case MCI_STOP:   uprintf(6, L"Error Stopping Music : \n%ls\nCode : %d", reason, result); break;
-        case MCI_CLOSE: uprintf(6, L"Error Closing Music : \n%ls\nCode : %d", reason, result); break;
-        default:
-            uprintf(6, L"Player Error : \n%ls\nCode : %d", reason, result);
+        case MCI_PLAY:  // MCI_PLAY 명령일 때
+            uprintf(6, L"Error Playing Music : \n%ls\nCode : %d", reason, result); // 오류 메시지 출력
+            break;
+        case MCI_PAUSE: // MCI_PAUSE 명령일 때
+            uprintf(6, L"Error Pausing Music : \n%ls\nCode : %d", reason, result); // 오류 메시지 출력
+            break;
+        case MCI_STATUS: // MCI_STATUS 명령일 때
+            uprintf(6, L"Error Getting Information of Music : \n%ls\nCode : %d", reason, result); // 오류 메시지 출력
+            break;
+        case MCI_STOP: // MCI_STOP 명령일 때
+            uprintf(6, L"Error Stopping Music : \n%ls\nCode : %d", reason, result); // 오류 메시지 출력
+            break;
+        case MCI_CLOSE: // MCI_CLOSE 명령일 때
+            uprintf(6, L"Error Closing Music : \n%ls\nCode : %d", reason, result); // 오류 메시지 출력
+            break;
+        default: // 그 외 명령일 때
+            uprintf(6, L"Player Error : \n%ls\nCode : %d", reason, result); // 오류 메시지 출력
             break;
         }
         exit(1); // 프로그램 종료
@@ -148,6 +197,10 @@ void Next() {
 
 // 이전 곡 재생 함수
 void Prev() {
+    if (player.repeat == 2) {
+        MoveTo(-GetStatus(MCI_STATUS_POSITION));
+        return;
+    }
     if (player.playIndex > 0) { // 현재 재생 인덱스가 0보다 클 때
         int currentIndex = player.playIndex; // 현재 인덱스 저장
         player.playIndex = getIntArrayValue(&player.playedArray, getIntArrayLength(&player.playedArray) - 2); // 이전 인덱스 설정
@@ -170,6 +223,20 @@ void Prev() {
         uprintf(6, L"Play Prev Music.."); // 이전 곡 재생 메시지 출력
         player.paused = 0; // 일시 정지 해제
     }
+}
+
+void PlayIndex(int index) {
+    int currentIndex = player.playIndex;
+    int indexToPlay = checkIntArrayValue(&player.playedArray, index);
+    if (indexToPlay != -1)
+        removeIntArrayValue(&player.playedArray, indexToPlay); // 이전 인덱스 제거
+    player.paused = 1;
+    player.playIndex = index;
+    ExecuteMCI(player.deviceID, MCI_STOP, 0, (DWORD_PTR)&param.genericParam);
+    ExecuteMCI(player.deviceID, MCI_CLOSE, 0, 0); // MCI 닫기 명령 실행
+    player.paused = 0;
+    ResetParam();
+    Ready(); Play(); // 준비 및 재생 함수 호출
 }
 
 // 셔플 재생 함수
@@ -255,6 +322,9 @@ int CheckPlayer() {
                 }
                 removeIntArray(&leftArray); // 남은 곡 배열 제거
             }
+            else if (checkIntArrayValue(&leftArray, player.playIndex + 1) != -1) {
+                player.playIndex++;
+            }
             else
                 player.playIndex = getIntArrayValue(&leftArray, 0); // 재생 안한 곡 중 다음 곡 인덱스 설정
             ExecuteMCI(player.deviceID, MCI_CLOSE, 0, 0); // MCI 닫기 명령 실행
@@ -276,7 +346,7 @@ int CheckPlayer() {
             ExecuteMCI(player.deviceID, MCI_CLOSE, 0, 0); // MCI 닫기 명령 실행
             uprintf(6, L"Play Ended"); // 재생 종료 메시지 출력
             ResetParam(); // 파라미터 초기화
-            DeleteTempFile(); // 임시 파일 삭제
+            CleanupTempFolder(); // 임시 파일 삭제
             system("pause"); // 일시 정지
             return 0; // 함수 종료
         }

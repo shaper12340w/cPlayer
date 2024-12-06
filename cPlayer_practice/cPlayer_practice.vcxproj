@@ -137,7 +137,6 @@
   <ItemGroup>
     <ClInclude Include="dynamicArray.h" />
     <ClInclude Include="fileMannger.h" />
-    <ClInclude Include="main.h" />
     <ClInclude Include="manageConsole.h" />
     <ClInclude Include="musicPlayer.h" />
     <ClInclude Include="playerUI.h" />
