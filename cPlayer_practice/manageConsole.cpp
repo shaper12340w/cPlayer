@@ -9,13 +9,9 @@ int isTerminal = -1;  // 터미널 여부를 저장하는 전역 변수, 초기값은 -1
 
 typedef struct {  // EnumData 구조체 정의
    HWND* targetHwnd;  // 찾은 윈도우 핸들을 저장할 포인터
-    const TCHAR* windowName;  // 찾고자 하는 윈도우 이름
+   const TCHAR* windowName;  // 찾고자 하는 윈도우 이름
 } EnumData;
 
-BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam) {
-    EnumData* data = (EnumData*)lParam;
-    DWORD processId;
-    TCHAR windowTitle[MAX_PATH] = { 0 };
 
 /*
 * 콘솔 창의 크기를 조정하기 위해, 특히 윈도우의 "터미널" 앱의 창의 크기를 조절하기 위해 창의 핸들(정보)를
@@ -38,8 +34,8 @@ BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam) {  // EnumWindows 함수에
    GetWindowText(hwnd, windowTitle, MAX_PATH);  // hwnd에 해당하는 윈도우의 제목을 가져옴
 
    if (data->windowName != NULL && _tcsstr(windowTitle, data->windowName) == NULL) {  // 윈도우 이름 비교
-        return TRUE;  // 윈도우 이름이 다르면 계속 탐색
-    }
+       return TRUE;  // 윈도우 이름이 다르면 계속 탐색
+   }
 
    GetWindowThreadProcessId(hwnd, &processId);  // 윈도우의 프로세스 ID를 가져옴
    HANDLE processHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, processId);  // 프로세스 핸들을 엶
@@ -48,14 +44,14 @@ BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam) {  // EnumWindows 함수에
        TCHAR processName[MAX_PATH] = { 0 };  // 프로세스 이름을 저장할 배열
        if (GetModuleBaseName(processHandle, NULL, processName, MAX_PATH)) {  // 프로세스 이름을 가져옴
            if (_tcsicmp(processName, _T("WindowsTerminal.exe")) == 0) {  // 프로세스 이름이 "WindowsTerminal.exe"인지 비교
-                *(data->targetHwnd) = hwnd;  // 발견한 핸들을 저장
+               *(data->targetHwnd) = hwnd;  // 발견한 핸들을 저장
                CloseHandle(processHandle);  // 프로세스 핸들을 닫음
-                return FALSE;  // 탐색 종료
-            }
-        }
+               return FALSE;  // 탐색 종료
+           }
+       }
        CloseHandle(processHandle);  // 프로세스 핸들을 닫음
-    }
-    return TRUE;  // 계속 탐색
+   }
+   return TRUE;  // 계속 탐색
 }
 
 HWND FindTerminalWindow(const TCHAR* windowName) {  // 터미널 윈도우를 찾는 함수
@@ -90,40 +86,39 @@ int CheckConsoleRegistry() {  // 콘솔 레지스트리를 확인하는 함수
    if (RegOpenKeyEx(HKEY_CURRENT_USER, TEXT("CONSOLE\\%%Startup"), 0, KEY_READ, &hkey) != ERROR_SUCCESS) {  // 레지스트리 키 열기
        clearLine(6); uprintf(6, L"레지스트리를 여는 과정에서 오류가 발생했습니다");  // 오류 메시지 출력
        return -1;  // 오류 반환
-    }
+   }
 
    dwSize = sizeof(value);  // 데이터 크기 설정
 
    if (RegQueryValueExW(hkey, TEXT("DelegationConsole"), NULL, NULL, (LPBYTE)value, &dwSize) == ERROR_SUCCESS) {  // 레지스트리 값 조회
        if (wcscmp(value, L"{2EACA947-7F5F-4CFA-BA87-8F7FBEEFBE69}") == 0)  // 값 비교
            return 0; // yes
-        else
+       else
            return 1; // no
-    }
-    else
+   }
+   else
        return -1;  // 오류 반환
 }
 
 void resizeWindow(int width, int height) {  // 윈도우 크기를 조정하는 함수
-    
+   
    if (isTerminal == -1) isTerminal = CheckConsoleRegistry();  // 터미널 여부 확인
    HWND targetHwnd = FindTerminalWindow(player.pathArray.array != NULL ? wcsrchr(getStringArrayValue(&player.pathArray, player.playIndex), L'\\') + 1 : NULL);  // 터미널 윈도우 찾기
    switch (isTerminal) {  // 터미널 여부에 따른 분기
-    case 0:
-        
+   case 0:
+       
        if (targetHwnd == NULL) break;  // 윈도우 핸들이 NULL인 경우 종료
        RECT rect;  // 윈도우 위치와 크기를 저장할 구조체
        GetWindowRect(targetHwnd, &rect);  // 윈도우 위치와 크기 가져오기
        MoveWindow(targetHwnd, rect.left, rect.top, width*10, height*23, TRUE);  // 윈도우 크기 조정
-        break;
+       break;
 
-    case 1:
+   case 1:
 
        char buffer[256];  // 명령어를 저장할 배열
        sprintf_s(buffer,"mode con cols=%d lines=%d",width,height);  // 명령어 생성
        system(buffer);  // 명령어 실행
-        break;
+       break;
 
-    }
+   }
 }
-
