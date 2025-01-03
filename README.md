@@ -105,8 +105,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-### Enhancements
-
-1. **Add Visuals**: Include a logo or ASCII art banner at the top.
-2. **Include GIF or Screenshot**: Showcase the console UI and the player in action.
-3. **Provide Example Commands**: For developers, add examples on how to compile and run the program.
